@@ -1,15 +1,10 @@
-To update the project packages:
-```
-npm i @reduxjs/toolkit @testing-library/jest-dom @testing-library/react @testing-library/user-event eslint-config-airbnb eslint-plugin-react prop-types react react-dom react-redux react-router-dom react-scripts redux redux-logger redux-thunk web-vitals react-test-renderer
-```
-
-# Project Name
+# Rent A Car
 
 > This repository contains React Redux Template.
 
 ## Get Started
- * [Netlify Live](https://PROJECT_NAME-raoakif.netlify.app/)
- * [Heroku Live](https://PROJECT_NAME-raoakif.herokuapp.com/)
+ * [Netlify Live](https://RentACar-raoakif.netlify.app/)
+ * [Heroku Live](https://RentACar-raoakif.herokuapp.com/)
 
 
 # Getting Started with Create React App
@@ -18,11 +13,11 @@ npm i @reduxjs/toolkit @testing-library/jest-dom @testing-library/react @testing
 
 ### Setup
 ```
-git clone git@github.com:RaoAkif/PROJECT_NAME.git
+git clone git@github.com:RaoAkif/RentACar.git
 ```
 ### Install
 ```
-cd PROJECT_NAME
+cd RentACar
 ```
 ```
 npm i
@@ -49,9 +44,27 @@ npm run build
 ```
 
 ### Deployment
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/PROJECT_NAME)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/RentACar)
 
 ## Authors
+
+👤 **Retky**
+
+- GitHub: [@RaoAkif](https://github.com/RaoAkif)
+- Twitter: [@RaoAkif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+
+👤 **Fernando**
+
+- GitHub: [@RaoAkif](https://github.com/RaoAkif)
+- Twitter: [@RaoAkif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+
+👤 **Andres**
+
+- GitHub: [@RaoAkif](https://github.com/RaoAkif)
+- Twitter: [@RaoAkif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
 
 👤 **RaoAkif**
 
