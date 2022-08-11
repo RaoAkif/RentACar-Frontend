@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-// import CarDetail from './pages/CarDetail';
+import CarDetail from './pages/CarDetail';
 // import AddCar from './pages/AddCar';
 // import DeleteCar from './pages/DeleteCar';
 // import Rentals from './pages/Rentals';
@@ -14,8 +14,8 @@ function App() {
       <section>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/car-detail" element={<CarDetail />} />
-          <Route path="/add-car" element={<AddCar />} />
+          <Route path="/car-detail/:id" element={<CarDetail />} />
+          {/* <Route path="/add-car" element={<AddCar />} />
           <Route path="/delete-car" element={<DeleteCar />} />
           <Route path="/rentals" element={<Rentals />} />
           <Route path="/new-rental" element={<NewRental />} /> */}
