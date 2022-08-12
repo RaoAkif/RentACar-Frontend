@@ -5,7 +5,7 @@ import CarDetail from './pages/CarDetail';
 import AddCar from './pages/AddCar';
 // import DeleteCar from './pages/DeleteCar';
 import Rentals from './pages/Rentals';
-// import NewRental from './pages/NewRental';
+import NewRental from './pages/NewRental';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/add-car" element={<AddCar />} />
           {/* <Route path="/delete-car" element={<DeleteCar />} /> */}
           <Route path="/rentals" element={<Rentals />} />
-          {/* <Route path="/new-rental" element={<NewRental />} /> */}
+          <Route path="/new-rental" element={<NewRental />} />
         </Routes>
       </section>
     </BrowserRouter>

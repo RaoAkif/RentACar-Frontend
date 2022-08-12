@@ -10,7 +10,6 @@ function Rentals() {
       carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://www.ford.com/content/dam/ford/na/us/english/vehicle-overview/fiesta/fiesta-overview-hero.png', city: 'New York', date: '12/12/2018',
     },
   ];
-  console.log(rents);
 
   return (
     <div>
