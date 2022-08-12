@@ -18,7 +18,7 @@ function NewRental() {
       <form className="newRentalForm" onSubmit={handleSubmitRent}>
         <select name="car" id="car">
           {cars.map((car) => (
-            <option key={car.id} value={car.id}>
+            <option key={car} value={car.id}>
               {car.name}
               {' '}
               {car.model}

@@ -26,7 +26,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/icecream"
+              to="/rentals"
               onClick={handleMobileMenu}
             >
               RENTALS
@@ -35,7 +35,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/users"
+              to="/add_rental"
               onClick={handleMobileMenu}
             >
               ADD A RENTAL
