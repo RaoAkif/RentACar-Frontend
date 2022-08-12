@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import CarDetail from './pages/CarDetail';
 import AddCar from './pages/AddCar';
 // import DeleteCar from './pages/DeleteCar';
-// import Rentals from './pages/Rentals';
+import Rentals from './pages/Rentals';
 // import NewRental from './pages/NewRental';
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/car-detail/:id" element={<CarDetail />} />
           <Route path="/add-car" element={<AddCar />} />
-          {/* <Route path="/delete-car" element={<DeleteCar />} />
+          {/* <Route path="/delete-car" element={<DeleteCar />} /> */}
           <Route path="/rentals" element={<Rentals />} />
-          <Route path="/new-rental" element={<NewRental />} /> */}
+          {/* <Route path="/new-rental" element={<NewRental />} /> */}
         </Routes>
       </section>
     </BrowserRouter>
