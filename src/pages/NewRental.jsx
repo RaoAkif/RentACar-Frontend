@@ -1,4 +1,5 @@
 import React from 'react';
+import './NewRental.css';
 
 function NewRental() {
   const cars = [
@@ -13,10 +14,10 @@ function NewRental() {
   };
 
   return (
-    <div>
+    <div className="add-rental-main">
       <h2>Rent A Car</h2>
       <form className="newRentalForm" onSubmit={handleSubmitRent}>
-        <select name="car" id="car">
+        <select name="car" id="car" className="form-select form-select-lg mb-3" aria-label=".form-select-lg">
           {cars.map((car) => (
             <option key={car} value={car.id}>
               {car.name}
@@ -25,11 +26,10 @@ function NewRental() {
             </option>
           ))}
         </select>
+        <input className="form-control form-control-lg" type="text" placeholder="City" aria-label=".form-control-lg example" required />
+        <input type="date" name="date" id="date" placeholder="Date" className=".form-control-lg" required aria-label=".form-control-lg" />
         <br />
-        <input type="text" name="city" id="city" placeholder="City" required />
-        <input type="date" name="date" id="date" placeholder="Date" required />
-        <br />
-        <button type="submit">Rent Now</button>
+        <button id="btn-date-picker" type="submit">Rent Now</button>
       </form>
     </div>
   );

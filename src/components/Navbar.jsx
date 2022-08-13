@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { ReactComponent as Logo } from '../img/rentacar_logo.svg';
+import './Header.css';
 
 function Navbar({ handleMobileMenu }) {
   return (
@@ -20,7 +21,7 @@ function Navbar({ handleMobileMenu }) {
               to="/"
               onClick={handleMobileMenu}
             >
-              MODELS
+              CARS
             </NavLink>
           </li>
           <li>

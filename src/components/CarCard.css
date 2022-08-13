@@ -1,0 +1,7 @@
+.rent-card {
+  display: flex;
+}
+
+.rent-card > * {
+  display: flex;
+}

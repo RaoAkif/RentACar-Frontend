@@ -1,5 +1,6 @@
 import React from 'react';
 import CarCard from '../components/CarCard';
+import './Rentals.css';
 
 function Rentals() {
   const rents = [
@@ -13,7 +14,7 @@ function Rentals() {
 
   return (
     <div>
-      <h2>Rentals</h2>
+      <h2 className="page-title">Rentals</h2>
       <div className="rentals">
         {rents.map((rent) => (
           <CarCard
