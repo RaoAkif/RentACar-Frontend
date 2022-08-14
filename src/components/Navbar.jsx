@@ -26,7 +26,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/icecream"
+              to="/rentals"
               onClick={handleMobileMenu}
             >
               RENTALS
@@ -35,7 +35,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/users"
+              to="/new-rental"
               onClick={handleMobileMenu}
             >
               ADD A RENTAL
@@ -44,7 +44,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/add_car"
+              to="/add-car"
               onClick={handleMobileMenu}
             >
               ADD A CAR
@@ -53,7 +53,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/delete_car"
+              to="/delete-car"
               onClick={handleMobileMenu}
             >
               DELETE A CAR
