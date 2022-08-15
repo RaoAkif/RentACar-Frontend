@@ -4,11 +4,11 @@ import rental from './rental/rentalsReducer';
 import user from './user/user';
 
 const store = configureStore({
-    reducer: {
-        car,
-        rental,
-        user,
-    },
+  reducer: {
+    car,
+    rental,
+    user,
+  },
 });
 
 export default store;
