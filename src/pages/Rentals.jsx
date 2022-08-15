@@ -1,11 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRentals } from '../redux/rental/rentalsReducer';
 import CarCard from '../components/CarCard';
 
 function Rentals() {
+  const dispatch = useDispatch();
   const rentals = useSelector((store) => store.rentals);
 
-  const emptyRentalsPage = <h2>You don't have any rentals yet</h2>;
+  useEffect(() => {
+    dispatch(fetchRentals());
+  }, [dispatch]);
+
+  const emptyRentalsPage = <h2>You don&apos;t have any rentals yet</h2>;
 
   const rentalsPage = rentals.map((rent) => (
     <CarCard
