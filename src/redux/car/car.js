@@ -1,14 +1,12 @@
-import axios from "axios";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+export const carSlice = createSlice({
+  name: 'cars',
+  initialState: {
+    cars: [],
+  },
+  extraReducers: {},
+});
 
-const createSlice = () => createSlice({
-    name: "cars",
-    initialState: {
-        cars: [],
-        },
-        extraReducers: (builder) => {}
-    },
-);
-
-export default createSlice().reducer;
+export default carSlice.reducer;

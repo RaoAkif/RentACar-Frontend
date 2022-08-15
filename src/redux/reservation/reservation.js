@@ -1,13 +1,12 @@
-import axios from "axios";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const createSlice = () => createSlice({
-    name: "reservation",
-    initialState: {
-        reservation: [],
-        },
-        extraReducers: (builder) => {}
-    },
-);
+export const reservationSlice = createSlice({
+  name: 'reservation',
+  initialState: {
+    reservation: [],
+  },
+  extraReducers: {},
+});
 
-export default createSlice().reducer;
+export default reservationSlice.reducer;
