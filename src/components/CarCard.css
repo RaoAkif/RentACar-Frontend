@@ -1,7 +1,58 @@
 .rent-card {
   display: flex;
+  width: 50vw;
+  margin-left: 30vw;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-.rent-card > * {
+.name-model {
   display: flex;
+  align-items: baseline;
+  width: 70px;
+}
+
+.name-model > * {
+  padding-right: 5px;
+}
+
+.name-model > p {
+  font-size: 12px;
+}
+
+/* CARD IMAGE */
+.carImage {
+  position: relative;
+  margin: auto;
+}
+
+.card-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carImage img {
+  width: 100%;
+  height: 66% !important;
+  object-fit: cover;
+}
+
+.rent-card-info {
+  margin-right: 20px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35vh;
+  margin-right: 0;
+}
+
+.rent-card-info > * {
+  margin: 10px 0;
 }

@@ -15,11 +15,13 @@ function RentCard(props) {
   return (
     <div className="rent-card">
       <div className="carImage">
-        <img src={image} alt={carName} />
+        <img className="card-image" src={image} alt={carName} />
       </div>
       <div className="rent-card-info">
-        <h3>{carName}</h3>
-        <p>{model}</p>
+        <div className="name-model">
+          <h3>{carName}</h3>
+          <p>{model}</p>
+        </div>
         <p>{price}</p>
         <p>{city}</p>
         <p>{date}</p>
