@@ -1,34 +1,29 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import CarCard from '../components/CarCard';
 
 function Rentals() {
-  const rents = [
-    {
-      carName: 'Audi', model: 'A4', price: '$200', image: 'https://www.audiusa.com/wp-content/uploads/2018/06/audi-a4-2018-1.jpg', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://www.ford.com/content/dam/ford/na/us/english/vehicle-overview/fiesta/fiesta-overview-hero.png', city: 'New York', date: '12/12/2018',
-    },
-  ];
+  const rentals = useSelector((store) => store.rentals);
 
-  return (
-    <div>
-      <h2>Rentals</h2>
-      <div className="rentals">
-        {rents.map((rent) => (
-          <CarCard
-            key={rent.id}
-            carName={rent.carName}
-            model={rent.model}
-            price={rent.price}
-            image={rent.image}
-            city={rent.city}
-            date={rent.date}
-          />
-        ))}
-      </div>
-    </div>
-  );
+  const emptyRentalsPage = <h2>You don't have any rentals yet</h2>;
+
+  const rentalsPage = rentals.map((rent) => (
+    <CarCard
+      key={rent.id}
+      carName={rent.carName}
+      model={rent.model}
+      price={rent.price}
+      image={rent.image}
+      city={rent.city}
+      date={rent.date}
+    />
+  ));
+
+  if (rentals.length === 0) {
+    return emptyRentalsPage;
+  }
+
+  return rentalsPage;
 }
 
 export default Rentals;
