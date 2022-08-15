@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRentals } from '../redux/rental/rentalsReducer';
+import { fetchRentals, deleteRental } from '../redux/rental/rentalsReducer';
 import CarCard from '../components/CarCard';
 
 function Rentals() {
@@ -11,18 +11,27 @@ function Rentals() {
     dispatch(fetchRentals());
   }, [dispatch]);
 
+  const handleDelete = (id) => {
+    dispatch(deleteRental(id));
+  };
+
   const emptyRentalsPage = <h2>You don&apos;t have any rentals yet</h2>;
 
   const rentalsPage = rentals.map((rent) => (
-    <CarCard
-      key={rent.id}
-      carName={rent.carName}
-      model={rent.model}
-      price={rent.price}
-      image={rent.image}
-      city={rent.city}
-      date={rent.date}
-    />
+    <div key={rent.id}>
+      <CarCard
+        key={rent.id}
+        carName={rent.car.name}
+        model={rent.car.model}
+        price={rent.car.rent}
+        image={rent.car.image}
+        city={rent.city}
+        date={rent.date}
+      />
+      <button type="button" onClick={() => handleDelete(rent.id)}>
+        Delete
+      </button>
+    </div>
   ));
 
   if (rentals.length === 0) {
