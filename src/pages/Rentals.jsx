@@ -5,7 +5,7 @@ import CarCard from '../components/CarCard';
 
 function Rentals() {
   const dispatch = useDispatch();
-  const rentals = useSelector((store) => store.rentals);
+  const rentals = useSelector((store) => store.rental);
 
   useEffect(() => {
     dispatch(fetchRentals());
