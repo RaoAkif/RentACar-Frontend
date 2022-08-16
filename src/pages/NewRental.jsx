@@ -1,6 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { addRental } from '../redux/rental/rentalsReducer';
 
 function NewRental() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const cars = [
     { id: 1, name: 'Audi', model: 'A4' },
     { id: 2, name: 'BMW', model: 'X5' },
@@ -9,7 +15,14 @@ function NewRental() {
 
   const handleSubmitRent = (e) => {
     e.preventDefault();
-    console.log('Submitted');
+    const form = e.target;
+    const obj = {
+      car_id: form.car.value,
+      date: form.date.value,
+      city: form.city.value,
+    };
+    dispatch(addRental(obj));
+    navigate('/rentals');
   };
 
   return (

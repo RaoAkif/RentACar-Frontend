@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRentals, deleteRental } from '../redux/rental/rentalsReducer';
 import CarCard from '../components/CarCard';
 
 function Rentals() {
-  const rents = [
-    {
-      carName: 'Audi', model: 'A4', price: '$200', image: 'https://www.audiusa.com/wp-content/uploads/2018/06/audi-a4-2018-1.jpg', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://www.ford.com/content/dam/ford/na/us/english/vehicle-overview/fiesta/fiesta-overview-hero.png', city: 'New York', date: '12/12/2018',
-    },
-  ];
+  const dispatch = useDispatch();
+  const rentals = useSelector((store) => store.rental);
 
-  return (
-    <div>
-      <h2>Rentals</h2>
-      <div className="rentals">
-        {rents.map((rent) => (
-          <CarCard
-            key={rent.id}
-            carName={rent.carName}
-            model={rent.model}
-            price={rent.price}
-            image={rent.image}
-            city={rent.city}
-            date={rent.date}
-          />
-        ))}
-      </div>
+  useEffect(() => {
+    dispatch(fetchRentals());
+  }, [dispatch]);
+
+  const handleDelete = (id) => {
+    dispatch(deleteRental(id));
+  };
+
+  const emptyRentalsPage = <h2>You don&apos;t have any rentals yet</h2>;
+
+  const rentalsPage = rentals.map((rent) => (
+    <div key={rent.id}>
+      <CarCard
+        key={rent.id}
+        carName={rent.car.name}
+        model={rent.car.model}
+        price={rent.car.rent}
+        image={rent.car.image}
+        city={rent.city}
+        date={rent.date}
+      />
+      <button type="button" onClick={() => handleDelete(rent.id)}>
+        Delete
+      </button>
     </div>
-  );
+  ));
+
+  if (rentals.length === 0) {
+    return emptyRentalsPage;
+  }
+
+  return rentalsPage;
 }
 
 export default Rentals;
