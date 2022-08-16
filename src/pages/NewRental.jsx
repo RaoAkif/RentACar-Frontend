@@ -8,7 +8,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addRental } from '../redux/rental/rentalsReducer';
 
-
 function NewRental() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

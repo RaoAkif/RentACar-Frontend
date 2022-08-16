@@ -46,7 +46,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/add-car"
+              to="/add_car"
               onClick={handleMobileMenu}
             >
               ADD A CAR
@@ -55,7 +55,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/delete-car"
+              to="/delete_car"
               onClick={handleMobileMenu}
             >
               DELETE A CAR

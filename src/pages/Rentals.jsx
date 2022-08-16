@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchRentals, deleteRental } from '../redux/rental/rentalsReducer';
+import React from 'react';
 import CarCard from '../components/CarCard';
 import './Rentals.css';
 
@@ -30,15 +28,8 @@ function Rentals() {
           />
         ))}
       </div>
-
     </div>
-  ));
-
-  if (rentals.length === 0) {
-    return emptyRentalsPage;
-  }
-
-  return rentalsPage;
+  );
 }
 
 export default Rentals;
