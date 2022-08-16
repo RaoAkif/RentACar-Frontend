@@ -27,13 +27,18 @@ function RentCard(props) {
   );
 }
 
+RentCard.defaultProps = {
+  city: '',
+  date: '',
+};
+
 RentCard.propTypes = {
   carName: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  city: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  city: PropTypes.string,
+  date: PropTypes.string,
 };
 
 export default RentCard;

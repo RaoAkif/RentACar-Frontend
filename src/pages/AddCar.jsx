@@ -33,7 +33,7 @@ function AddCar() {
         <br />
         <input type="textarea" placeholder="Description" name="desc" required />
         <br />
-        <input type="number" min="0.00" step="10.00" placeholder="Rent Cost" name="rent" required />
+        <input type="number" min="0.00" step="0.01" placeholder="Rent Cost" name="rent" required />
         <br />
         <button type="submit">Add Car</button>
       </form>

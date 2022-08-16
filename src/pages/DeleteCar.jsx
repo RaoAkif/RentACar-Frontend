@@ -1,37 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import CarCard from '../components/CarCard';
+import { fetchCars, deleteCar } from '../redux/car/car';
 
 function DeleteCar() {
-  const cars = [
-    {
-      name: 'BMW', model: 'M3', rent: '$100', image: 'https://th.bing.com/th/id/R.e8d460c004d696c3255d513978bfb864?rik=4bBYE9ASyq7lWg&riu=http%3a%2f%2fwww.marinoperformancemotors.com%2fimagetag%2f12652%2f37%2fl%2fUsed-2018-BMW-M3.jpg&ehk=RTlfzS94QNQ836EwJMu3p4xkRWqZMfkGTEo%2b99cBmgs%3d&risl=&pid=ImgRaw&r=0', desc: 'This is a description of the car',
-    },
-    {
-      name: 'Audi', model: 'A4', rent: '$100', image: 'https://th.bing.com/th/id/R.e8d460c004d696c3255d513978bfb864?rik=4bBYE9ASyq7lWg&riu=http%3a%2f%2fwww.marinoperformancemotors.com%2fimagetag%2f12652%2f37%2fl%2fUsed-2018-BMW-M3.jpg&ehk=RTlfzS94QNQ836EwJMu3p4xkRWqZMfkGTEo%2b99cBmgs%3d&risl=&pid=ImgRaw&r=0', desc: 'This is a description of the car',
-    },
-  ];
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const cars = useSelector((store) => store.car);
 
-  return (
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const elements = document.querySelectorAll('input[type="checkbox"]');
+    elements.forEach((element) => {
+      if (element.checked) {
+        dispatch(deleteCar(element.id));
+      }
+    });
+    navigate('/');
+  };
+
+  const emptyCarsPage = <h2>There are no cars available</h2>;
+  const carsPage = (
     <div>
       <h2>Delete Car</h2>
-      <form className="carsDelCards">
+      <form className="carsDelCards" onSubmit={handleDelete}>
         {cars.map((car) => (
           <div className="carDelCard" key={car.name}>
             <CarCard
               key={car.id}
-              name={car.name}
+              carName={car.name}
               model={car.model}
-              rent={car.rent}
+              price={car.rent}
               image={car.image}
               desc={car.desc}
             />
-            <input type="checkbox" name="delCar" id={car.name} />
+            <input type="checkbox" name="delCar" id={car.id} />
           </div>
         ))}
-        <button type="submit">Delete</button>
+        <button type="submit">Remove Cars</button>
       </form>
     </div>
   );
+
+  if (cars.length === 0) {
+    return emptyCarsPage;
+  }
+  return carsPage;
 }
 
 export default DeleteCar;

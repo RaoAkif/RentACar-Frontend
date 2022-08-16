@@ -33,9 +33,7 @@ function NewRental() {
         <select name="car" id="car">
           {cars.map((car) => (
             <option key={car.id} value={car.id}>
-              {car.name}
-              {' '}
-              {car.model}
+              {`${car.name} ${car.model} ($${car.rent})`}
             </option>
           ))}
         </select>
