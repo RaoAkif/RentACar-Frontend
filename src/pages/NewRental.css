@@ -1,9 +1,12 @@
 .add-rental-main {
   margin-top: 5vh;
-  margin-left: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.add-rental-main > h2 {
+  text-align: left;
 }
 
 .newRentalForm {
@@ -30,4 +33,8 @@
   font-size: 13px;
   font-weight: bold;
   color: white;
+}
+
+.form-control-lg {
+  width: 40vw;
 }

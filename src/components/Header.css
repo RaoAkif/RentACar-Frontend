@@ -1,5 +1,5 @@
 header {
-  width: 100%;
+  width: 20vw;
 }
 
 .hamburger {
@@ -16,6 +16,7 @@ header {
 }
 
 .navigation {
+  width: 20vw;
   height: 100vh;
   background-color: #fff;
   position: fixed;
@@ -24,6 +25,11 @@ header {
   justify-content: space-between;
   align-items: center;
   animation: slideleft 1 0.2s ease-out;
+  border: 1px solid;
+  border-top-color: white;
+  border-right-color: #eeeeee;
+  border-bottom-color: white;
+  border-left-color: white;
 }
 
 .navigation-menu {
@@ -31,6 +37,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
 }
 
 .navigation-menu .logo {
@@ -117,7 +124,8 @@ a:hover {
   }
 
   .navigation-menu li a {
-    padding-left: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

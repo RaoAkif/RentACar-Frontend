@@ -1,0 +1,23 @@
+.addCar {
+  margin-left: 30vw;
+  margin-right: 5vw;
+}
+
+.addCar > h2 {
+  margin-bottom: 3vw;
+  padding-top: 20px;
+  margin-left: 115px;
+}
+
+#btn-add-car {
+  border: none;
+  background: #97BF0E;
+  padding: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-control-lg {
+  width: 40vw;
+}
