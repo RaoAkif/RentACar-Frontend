@@ -6,7 +6,7 @@ function AddCar() {
     <div className="addCar">
       <h2>Add Car</h2>
       <form className="addCarForm">
-        <input type="text" placeholder="City" name="name" className="form-control form-control-lg" aria-label=".form-control-lg example" required />
+        <input type="text" placeholder="Car Name" name="name" className="form-control form-control-lg" aria-label=".form-control-lg example" required />
         <br />
         <input type="text" placeholder="Model" name="model" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
