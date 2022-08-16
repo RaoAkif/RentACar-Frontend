@@ -14,8 +14,8 @@ function RentCard(props) {
 
   return (
     <div className="rent-card">
-      <div className="carImage">
-        <img className="card-image" src={image} alt={carName} />
+      <div className="car-image-div">
+        <img className="car-image" src={image} alt={carName} />
       </div>
       <div className="rent-card-info">
         <div className="name-model">
