@@ -1,17 +1,18 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addRental } from '../redux/rental/rentalsReducer';
+import { fetchCars } from '../redux/car/car';
 
 function NewRental() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const cars = [
-    { id: 1, name: 'Audi', model: 'A4' },
-    { id: 2, name: 'BMW', model: 'X5' },
-    { id: 3, name: 'Mercedes', model: 'C class' },
-  ];
+  const cars = useSelector((store) => store.car);
+
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
 
   const handleSubmitRent = (e) => {
     e.preventDefault();
