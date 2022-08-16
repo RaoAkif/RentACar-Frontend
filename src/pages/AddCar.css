@@ -12,10 +12,10 @@
 #btn-add-car {
   border: none;
   background: #97BF0E;
-  padding: 7px;
-  font-size: 13px;
-  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
   color: white;
+  border-radius: 5px;
 }
 
 .form-control-lg {

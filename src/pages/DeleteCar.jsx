@@ -1,5 +1,6 @@
 import React from 'react';
 import CarCard from '../components/CarCard';
+import './DeleteCar.css';
 
 function DeleteCar() {
   const cars = [
@@ -12,7 +13,7 @@ function DeleteCar() {
   ];
 
   return (
-    <div>
+    <div className="delete-car-main">
       <h2>Delete Car</h2>
       <form className="carsDelCards">
         {cars.map((car) => (

@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import CarDetail from './pages/CarDetail';
 import AddCar from './pages/AddCar';
 import DeleteCar from './pages/DeleteCar';
 import Rentals from './pages/Rentals';
 import NewRental from './pages/NewRental';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rentals" element={<Rentals />} />

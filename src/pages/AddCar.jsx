@@ -16,7 +16,7 @@ function AddCar() {
         <br />
         <input type="number" min="0.00" step="10.00" placeholder="Rent Cost" name="rent" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
-        <button id="btn-add-car" type="submit">Add Car</button>
+        <button id="btn-add-car" variant="primary" type="submit">Add Car</button>
       </form>
     </div>
   );

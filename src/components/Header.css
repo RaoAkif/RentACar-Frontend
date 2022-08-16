@@ -1,5 +1,5 @@
 header {
-  width: 20vw;
+  width: 100%;
 }
 
 .hamburger {
@@ -16,7 +16,7 @@ header {
 }
 
 .navigation {
-  width: 20vw;
+  width: 100vw;
   height: 100vh;
   background-color: #fff;
   position: fixed;
@@ -24,12 +24,12 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   animation: slideleft 1 0.2s ease-out;
-  border: 1px solid;
-  border-top-color: white;
-  border-right-color: #eeeeee;
-  border-bottom-color: white;
-  border-left-color: white;
+  z-index: 3;
 }
 
 .navigation-menu {
@@ -37,7 +37,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 20px;
 }
 
 .navigation-menu .logo {
@@ -45,7 +44,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 4rem;
-  margin: 0 0 0 0;
+  margin: 2rem 0 6rem 0;
   color: #444;
 }
 
@@ -124,8 +123,7 @@ a:hover {
   }
 
   .navigation-menu li a {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
   }
 }
 
