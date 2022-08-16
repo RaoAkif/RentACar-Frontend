@@ -142,8 +142,8 @@ a:hover {
     left: 200px;
     bottom: 40px;
     color: #fff;
-    background-color: var(--green-color); 
-    border-radius: 0px 40px 40px 0px;
+    background-color: var(--green-color);
+    border-radius: 0 40px 40px 0;
   }
 
   .close-arrow {
@@ -154,7 +154,7 @@ a:hover {
     transition: color 0.2s ease-in-out;
     display: block;
     transform: rotate(-90deg);
-   text-shadow: 2px 2px;
+    text-shadow: 2px 2px;
   }
 
   .close-arrow:hover {
