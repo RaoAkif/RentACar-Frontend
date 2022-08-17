@@ -3,3 +3,12 @@
   margin-bottom: 10vh;
   padding-top: 30px;
 }
+
+.react-multiple-carousel__arrow {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.react-multi-carousel-list  .carousel-container {
+  margin-top: 20vh;
+}

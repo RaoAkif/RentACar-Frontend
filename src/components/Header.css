@@ -30,7 +30,7 @@ header {
   right: 0;
   left: 0;
   animation: slideleft 1 0.2s ease-out;
-  z-index: 3;
+  z-index: 3 !important;
   border-right: 1px solid #ededed;
 }
 
