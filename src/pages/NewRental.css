@@ -1,0 +1,22 @@
+.add-rental-main {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-rental-main > h2 {
+  text-align: left;
+}
+
+#form-btn {
+  margin-left: 10px;
+  background: #97bf0e;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#formSelectCar {
+  width: 38.3vw;
+}
