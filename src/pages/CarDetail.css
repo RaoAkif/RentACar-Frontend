@@ -1,0 +1,55 @@
+.carDetail {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.carImage {
+  position: absolute;
+  top: 15%;
+  right: 60%;
+}
+
+.carInfo {
+  position: absolute;
+  top: 30%;
+  right: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.carInfo > * {
+  padding-bottom: 10px;
+}
+
+.name-model {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-top: 5px;
+}
+
+.name-model > p {
+  padding-left: 10px;
+}
+
+#form-btn-cd {
+  background: #97bf0e;
+  border: none;
+  border-radius: 20px;
+  width: 60%;
+  padding: 8px;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.carPrice {
+  background-color: rgb(221, 220, 220);
+  padding: 5px 67px;
+}

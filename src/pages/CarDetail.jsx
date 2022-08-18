@@ -1,8 +1,7 @@
 import React from 'react';
-// import { useParams } from "react-router-dom";
+import './CarDetail.css';
 
 function CarDetail() {
-  // const { id } = useParams();
   const name = 'BMW';
   const model = 'M3';
   const rent = '$100';
@@ -11,18 +10,15 @@ function CarDetail() {
 
   return (
     <div className="carDetail">
-      <div>
-        <h2>{name}</h2>
-        <p className="carModel">{model}</p>
-      </div>
-      <div className="carInfoGroup">
-        <div className="carImage"><img src={image} alt={name + model} /></div>
-        <div className="carInfo">
-          <p className="carPrice">{rent}</p>
-          <p className="carDesc">{desc}</p>
-
-          <button className="rentBtn" type="button">Rent</button>
+      <div className="carImage"><img src={image} alt={name + model} /></div>
+      <div className="carInfo">
+        <div className="name-model">
+          <h3>{name}</h3>
+          <p>{model}</p>
         </div>
+        <p className="carPrice">{rent}</p>
+        <p className="carDesc">{desc}</p>
+        <button id="form-btn-cd" type="button">Rent</button>
       </div>
     </div>
   );
