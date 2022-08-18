@@ -4,11 +4,11 @@ import reservation from './reservation/reservation';
 import user from './user/user';
 
 const store = configureStore({
-    reducer: {
-        car,
-        reservation,
-        user,
-    },
+  reducer: {
+    car,
+    reservation,
+    user,
+  },
 });
 
 export default store;

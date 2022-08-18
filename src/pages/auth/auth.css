@@ -1,0 +1,81 @@
+.auth-page {
+  width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/src/assets/images/car_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow:inset 0 0 0 2000px rgba(124, 184, 13, 0.76);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+  background: #fff;
+}
+
+.container h1 {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form button {
+  width: 100%;
+  height: 5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #97bf0e;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 3rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.navi-option {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dialog {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  color: rgb(255, 0, 0);
+}

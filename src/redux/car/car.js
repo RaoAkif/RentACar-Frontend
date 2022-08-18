@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export const carSlice = createSlice({
   name: 'cars',
