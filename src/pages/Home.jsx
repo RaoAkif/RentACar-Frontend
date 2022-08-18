@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/car/car';
 import CarCard from '../components/CarCard';
+import './Home.css';
 
 function Home() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function Home() {
 
   const carsPage = cars.map((car) => (
     <div key={car.id}>
-      <a href={`/car-detail/${car.id}`}>
+      <a href={`/car_detail/${car.id}`}>
         <CarCard
           key={car.id}
           carName={car.name}

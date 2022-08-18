@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CarCard from '../components/CarCard';
 import { fetchCars, deleteCar } from '../redux/car/car';
+import './DeleteCar.css';
 
 function DeleteCar() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function DeleteCar() {
 
   const emptyCarsPage = <h2>There are no cars available</h2>;
   const carsPage = (
-    <div>
+    <div className="delete-car-main">
       <h2>Delete Car</h2>
       <form className="carsDelCards" onSubmit={handleDelete}>
         {cars.map((car) => (

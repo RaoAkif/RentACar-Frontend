@@ -14,7 +14,7 @@ function CarDetail() {
   }, [dispatch]);
 
   const redirectHandler = () => {
-    navigate('/new-rental');
+    navigate('/add_rental');
   };
 
   return (
@@ -24,7 +24,7 @@ function CarDetail() {
         <p className="carModel">{car.model}</p>
       </div>
       <div className="carInfoGroup">
-        <div className="carImage"><img src={car.image} alt={car.model} /></div>
+        <div className="car-image-div"><img className="car-image" src={car.image} alt={car.model} /></div>
         <div className="carInfo">
           <p className="carPrice">{car.rent}</p>
           <p className="carDesc">{car.desc}</p>

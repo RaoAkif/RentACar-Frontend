@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addCar } from '../redux/car/car';
+import './AddCar.css';
 
 function AddCar() {
   const dispatch = useDispatch();
@@ -25,17 +26,17 @@ function AddCar() {
     <div className="addCar">
       <h2>Add Car</h2>
       <form className="addCarForm" onSubmit={handleSubmit}>
-        <input type="text" placeholder="Brand" name="name" required />
+        <input type="text" placeholder="Car Name" name="name" className="form-control form-control-lg" aria-label=".form-control-lg example" required />
         <br />
-        <input type="text" placeholder="Model" name="model" required />
+        <input type="text" placeholder="Model" name="model" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
-        <input type="text" placeholder="Image Url" name="image" required />
+        <input type="text" placeholder="Image Url" name="image" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
-        <input type="textarea" placeholder="Description" name="desc" required />
+        <input type="textarea" placeholder="Description" name="desc" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
-        <input type="number" min="0.00" step="0.01" placeholder="Rent Cost" name="rent" required />
+        <input type="number" min="0.00" step="10.00" placeholder="Rent Cost" name="rent" className="form-control form-control-lg" aria-label=".form-control-lg" required />
         <br />
-        <button type="submit">Add Car</button>
+        <button id="btn-add-car" variant="primary" type="submit">Add Car</button>
       </form>
     </div>
   );
