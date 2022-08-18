@@ -1,19 +1,20 @@
 import React from 'react';
 import CarCard from '../components/CarCard';
+import './Rentals.css';
 
 function Rentals() {
   const rents = [
     {
-      carName: 'Audi', model: 'A4', price: '$200', image: 'https://www.audiusa.com/wp-content/uploads/2018/06/audi-a4-2018-1.jpg', city: 'New York', date: '12/12/2018',
+      carName: 'Audi', model: 'A4', price: '$200', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
     },
     {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://www.ford.com/content/dam/ford/na/us/english/vehicle-overview/fiesta/fiesta-overview-hero.png', city: 'New York', date: '12/12/2018',
+      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
     },
   ];
 
   return (
     <div>
-      <h2>Rentals</h2>
+      <h2 className="page-title">Rentals</h2>
       <div className="rentals">
         {rents.map((rent) => (
           <CarCard

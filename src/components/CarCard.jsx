@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CarCard.css';
 
 function RentCard(props) {
   const {
@@ -13,12 +14,14 @@ function RentCard(props) {
 
   return (
     <div className="rent-card">
-      <div className="carImage">
-        <img src={image} alt={carName} />
+      <div className="car-image-div">
+        <img className="car-image" src={image} alt={carName} />
       </div>
       <div className="rent-card-info">
-        <h3>{carName}</h3>
-        <p>{model}</p>
+        <div className="name-model">
+          <h3>{carName}</h3>
+          <p>{model}</p>
+        </div>
         <p>{price}</p>
         <p>{city}</p>
         <p>{date}</p>

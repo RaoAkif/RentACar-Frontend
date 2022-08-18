@@ -1,6 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
+import { GiTriangleTarget } from 'react-icons/gi';
 import { ReactComponent as Logo } from '../img/rentacar_logo.svg';
+import './Header.css';
 
 function Navbar({ handleMobileMenu }) {
   return (
@@ -20,13 +22,13 @@ function Navbar({ handleMobileMenu }) {
               to="/"
               onClick={handleMobileMenu}
             >
-              MODELS
+              CARS
             </NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/icecream"
+              to="/rentals"
               onClick={handleMobileMenu}
             >
               RENTALS
@@ -35,7 +37,7 @@ function Navbar({ handleMobileMenu }) {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
-              to="/users"
+              to="/add_rental"
               onClick={handleMobileMenu}
             >
               ADD A RENTAL
@@ -63,6 +65,9 @@ function Navbar({ handleMobileMenu }) {
       </div>
       <div className="nav-footer">
         © 2022 Microverse
+      </div>
+      <div className="close-btn">
+        <GiTriangleTarget className="close-arrow" onClick={handleMobileMenu} />
       </div>
     </nav>
   );
