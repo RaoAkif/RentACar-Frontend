@@ -4,19 +4,38 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import Navbar from './Navbar';
 
 function Header() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [transitionState, setTransitionState] = useState(false);
+  const transitions = {
+    entering: {
+      display: 'flex',
+    },
+    entered: {
+      opacity: 1,
+      display: 'flex',
+    },
+    exiting: {
+      opacity: 0,
+      display: 'flex',
+    },
+    exited: {
+      opacity: 0,
+      display: 'none',
+    },
+  };
 
-  const handleMobileMenu = () => {
-    setIsNavExpanded(!isNavExpanded);
+  const handleMenu = () => {
+    setTransitionState(!transitionState);
   };
 
   return (
     <>
-      {
-        isNavExpanded && <Navbar handleMobileMenu={handleMobileMenu} />
-      }
+      <Navbar
+        handleMenu={handleMenu}
+        transitionState={transitionState}
+        transitions={transitions}
+      />
       <header>
-        <HiMenuAlt4 className="hamburger" onClick={handleMobileMenu} />
+        <HiMenuAlt4 className="hamburger" onClick={handleMenu} />
       </header>
     </>
   );
