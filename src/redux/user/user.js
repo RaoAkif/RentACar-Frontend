@@ -3,11 +3,11 @@ import axios from 'axios';
 
 const baseUrl = 'http://localhost:3000/api/v1';
 
-const showDialog = () => {
+const showDialog = (text) => {
   const dialog = document.createElement('dialog');
   const authPage = document.querySelector('.auth-page');
   dialog.classList.add('dialog');
-  dialog.innerHTML = 'User does not exist';
+  dialog.innerHTML = `<p>${text}</p>`;
   authPage.appendChild(dialog);
   dialog.showModal();
   setTimeout(() => {
@@ -31,24 +31,22 @@ export const userSlice = createSlice({
   name: 'user',
   initialState: {
     user: null,
-    status: 'idle',
   },
   reducers: {},
   extraReducers: {
     [signinUser.fulfilled]: (state, action) => {
-      state.status = 'succeeded';
       state.user = action.payload;
       window.location.href = '/';
     },
     [signinUser.rejected]: () => {
-      showDialog();
+      showDialog('User not found');
     },
     [createUser.fulfilled]: (state, action) => {
-      state.status = 'succeeded';
       state.user = action.payload;
+      window.location.href = '/';
     },
-    [createUser.rejected]: (state) => {
-      state.status = 'rejected';
+    [createUser.rejected]: () => {
+      showDialog('User already exists');
     },
   },
 });
