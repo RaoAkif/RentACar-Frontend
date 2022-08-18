@@ -6,6 +6,8 @@ import AddCar from './pages/AddCar';
 import DeleteCar from './pages/DeleteCar';
 import Rentals from './pages/Rentals';
 import NewRental from './pages/NewRental';
+import Login from './pages/auth/login';
+import Signup from './pages/auth/signup';
 import Header from './components/Header';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/rentals" element={<Rentals />} />
         <Route path="/add_rental" element={<NewRental />} />
         <Route path="/car_detail/:id" element={<CarDetail />} />
