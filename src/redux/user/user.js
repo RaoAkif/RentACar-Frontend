@@ -45,7 +45,7 @@ export const userSlice = createSlice({
       state.user = action.payload;
       window.location.href = '/';
     },
-    [createUser.rejected]: (state) => {
+    [createUser.rejected]: () => {
       showDialog('User already exists');
     },
   },
