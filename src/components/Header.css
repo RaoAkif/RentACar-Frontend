@@ -21,7 +21,7 @@ header {
   height: 100vh;
   background-color: #fff;
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -29,8 +29,7 @@ header {
   bottom: 0;
   right: 0;
   left: 0;
-  animation: slideleft 1 0.2s ease-out;
-  z-index: 3 !important;
+  z-index: 3000;
   border-right: 1px solid #ededed;
 }
 
@@ -61,6 +60,7 @@ header {
   font-size: 1.8rem;
   font-weight: bold;
   background-color: #fff;
+  padding: 0;
 }
 
 .navigation-menu li {
@@ -94,14 +94,6 @@ a:hover {
   background-color: var(--green-color) !important;
 }
 
-.navigation-menu.expanded ul {
-  display: block;
-}
-
-.show {
-  display: block !important;
-}
-
 .nav-footer {
   margin-bottom: 4rem;
   font-size: 1.4rem;
@@ -111,7 +103,15 @@ a:hover {
   display: none;
 }
 
-@media only screen and (min-width: 481px) {
+.close-btn-mobile {
+  color: #ccc;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
   .navigation {
     width: 200px;
   }
@@ -122,6 +122,7 @@ a:hover {
 
   .navigation-menu ul {
     font-size: 1.6rem;
+    padding-left: 2rem;
   }
 
   .navigation-menu li {
@@ -161,16 +162,8 @@ a:hover {
   .close-arrow:hover {
     color: #658200 !important;
   }
-}
 
-@keyframes slideleft {
-  0% {
-    transform: translateX(-150px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+  .close-btn-mobile {
+    display: none;
   }
 }
