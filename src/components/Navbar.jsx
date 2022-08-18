@@ -11,7 +11,6 @@ function Navbar({ handleMobileMenu }) {
         <Link
           className="logo"
           to="/"
-          onClick={handleMobileMenu}
         >
           <Logo />
         </Link>
@@ -20,7 +19,6 @@ function Navbar({ handleMobileMenu }) {
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
               to="/"
-              onClick={handleMobileMenu}
             >
               CARS
             </NavLink>
@@ -29,7 +27,6 @@ function Navbar({ handleMobileMenu }) {
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
               to="/rentals"
-              onClick={handleMobileMenu}
             >
               RENTALS
             </NavLink>
@@ -38,7 +35,6 @@ function Navbar({ handleMobileMenu }) {
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
               to="/add_rental"
-              onClick={handleMobileMenu}
             >
               ADD A RENTAL
             </NavLink>
@@ -47,7 +43,6 @@ function Navbar({ handleMobileMenu }) {
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
               to="/add_car"
-              onClick={handleMobileMenu}
             >
               ADD A CAR
             </NavLink>
@@ -56,7 +51,6 @@ function Navbar({ handleMobileMenu }) {
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
               to="/delete_car"
-              onClick={handleMobileMenu}
             >
               DELETE A CAR
             </NavLink>
