@@ -1,9 +1,9 @@
-delete-car-main {
+.delete-car-main {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center; 
+  align-items: center;
   margin: 4rem 0;
 }
 
@@ -18,26 +18,26 @@ delete-car-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center; 
+  align-items: center;
   margin-top: 3rem;
 }
 
 .delete-btn {
-    width: 10rem;
-    background: var(--green-color);
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    color: white;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+  width: 10rem;
+  background: var(--green-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 .d-car-image-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center; 
+  align-items: center;
 }
 
 .d-car-image {
@@ -50,11 +50,11 @@ delete-car-main {
   font-size: 1.6rem;
 }
 
-.delete-table tr{
+.delete-table tr {
   padding: 4rem;
 }
 
-.delete-table tr td{
+.delete-table tr td {
   padding: 1rem;
 }
 

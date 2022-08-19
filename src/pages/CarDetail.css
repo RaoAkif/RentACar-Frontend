@@ -30,6 +30,10 @@
   padding-top: 0.5rem;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 .name-model > p {
   padding-left: 1rem;
 }
@@ -43,10 +47,6 @@
   color: white;
   font-size: 1.5rem;
   margin-top: 1rem;
-}
-
-p {
-  font-size: 1.2rem;
 }
 
 .carPrice {
