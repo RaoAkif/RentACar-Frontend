@@ -32,8 +32,8 @@ function NewRental() {
 
   return (
     <div className="add-rental-main">
-      <h2>Rent A Car</h2>
       <Form onSubmit={handleSubmitRent}>
+        <h2 style={{ textAlign: 'center' }}>Rent A Car</h2>
         <Form.Group className=" form-control-lg" controlId="formSelectCar">
           <Form.Label>Select a Car</Form.Label>
           <Form.Select className="form-control-lg">
