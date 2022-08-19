@@ -54,7 +54,6 @@ function NewRental() {
           <Form.Label>Select Date</Form.Label>
           <Form.Control type="date" name="dob" placeholder="Date of Birth" />
         </Form.Group>
-
         <Button id="form-btn" variant="primary" type="submit">
           Submit
         </Button>
