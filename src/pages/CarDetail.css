@@ -20,36 +20,36 @@
 }
 
 .carInfo > * {
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 .name-model {
   display: flex;
   align-items: center;
   padding: 0;
-  padding-top: 5px;
+  padding-top: 0.5rem;
 }
 
 .name-model > p {
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 
 #form-btn-cd {
   background: var(--green-color);
   border: none;
-  border-radius: 20px;
+  border-radius: 2rem;
   width: 60%;
-  padding: 8px;
+  padding: 0.8rem;
   color: white;
-  font-size: 15px;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 p {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .carPrice {
   background-color: rgb(221, 220, 220);
-  padding: 5px 67px;
+  padding: 0.5rem 6.7rem;
 }

@@ -6,14 +6,14 @@
 
 .car-image-div {
   background-color: rgb(229 229 229);
-  padding: 20px;
+  padding: 2rem;
   border-radius: 50%;
   margin-top: 10vh;
 }
 
 .car-image {
-  width: 250px;
-  margin-bottom: 20px;
+  width: 25rem;
+  margin-bottom: 2rem;
 }
 
 .name-model {
@@ -22,5 +22,5 @@
 }
 
 .name-model > p {
-  padding-left: 10px;
+  padding-left: 1rem;
 }
