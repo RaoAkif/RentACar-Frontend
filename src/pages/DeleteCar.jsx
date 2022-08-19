@@ -1,24 +1,32 @@
-import React from 'react';
-import DeleteCarCard from '../components/DeleteCarCard';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import CarCard from '../components/CarCard';
+import { fetchCars, deleteCar } from '../redux/car/car';
 import './DeleteCar.css';
 
 function DeleteCar() {
-  const cars = [
-    {
-      id: '1', name: 'BMW', model: 'M3', rent: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', desc: 'This is a description of the car',
-    },
-    {
-      id: '2', name: 'Audi', model: 'A4', rent: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', desc: 'This is a description of the car',
-    },
-    {
-      id: '3', name: 'BMW', model: 'M3', rent: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', desc: 'This is a description of the car',
-    },
-    {
-      id: '4', name: 'Audi', model: 'A4', rent: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', desc: 'This is a description of the car',
-    },
-  ];
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const cars = useSelector((store) => store.car);
 
-  return (
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const elements = document.querySelectorAll('input[type="checkbox"]');
+    elements.forEach((element) => {
+      if (element.checked) {
+        dispatch(deleteCar(element.id));
+      }
+    });
+    navigate('/');
+  };
+
+  const emptyCarsPage = <h2>There are no cars available</h2>;
+  const carsPage = (
     <div className="delete-car-main">
       <h2>DELETE&nbsp;&nbsp;CAR</h2>
       <form className="d-cars-delete-cards">
@@ -44,6 +52,11 @@ function DeleteCar() {
       </form>
     </div>
   );
+
+  if (cars.length === 0) {
+    return emptyCarsPage;
+  }
+  return carsPage;
 }
 
 export default DeleteCar;

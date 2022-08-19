@@ -30,7 +30,6 @@ export const deleteRental = (id) => async (dispatch) => {
   dispatch({
     type: DELETE_RENTAL,
     payload: res.data,
-    element: id,
   });
 };
 
@@ -41,7 +40,7 @@ const reducer = (state = initialState, action = {}) => {
     case 'ADD_RENTAL':
       return [...state, action.payload];
     case 'DELETE_RENTAL':
-      return state.filter((rental) => rental.id !== action.element);
+      return state.filter((rental) => rental.id !== action.payload.id);
     default:
       return state;
   }

@@ -1,31 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCars } from '../redux/car/car';
 import CarCard from '../components/CarCard';
 import './Home.css';
 
 function Home() {
-  const cars = [
-    {
-      carName: 'Audi', model: 'A4', price: '$200', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-    {
-      carName: 'Ford', model: 'Fiesta', price: '$100', image: 'https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png', city: 'New York', date: '12/12/2018',
-    },
-  ];
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -49,21 +30,41 @@ function Home() {
     },
   };
 
-  return (
+function Home() {
+  const dispatch = useDispatch();
+  const cars = useSelector((store) => store.car);
+
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
+  const emptyCarsPage = <h2>There are no cars available</h2>;
+
+  const carsPage = (
     <Carousel responsive={responsive} className="carousel-container" infinite>
-      {cars.map((car) => (
-        <CarCard
-          key={car.id}
-          carName={car.carName}
-          model={car.model}
-          price={car.price}
-          image={car.image}
-          city={car.city}
-          date={car.date}
-        />
-      ))}
+      cars.map((car) => (
+        <div key={car.id}>
+          <a href={`/car_detail/${car.id}`}>
+            <CarCard
+              key={car.id}
+              carName={car.name}
+              model={car.model}
+              price={car.rent}
+              image={car.image}
+              city={car.city}
+              date={car.date}
+            />
+          </a>
+        </div>
+      ))
     </Carousel>
-  );
+  )
+  
+  if (cars.length === 0) {
+    return emptyCarsPage;
+  }
+
+  return carsPage;
 }
 
 export default Home;
