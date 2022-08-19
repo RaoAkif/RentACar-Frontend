@@ -1,22 +1,23 @@
-.add-car-main {
-  margin-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.addCar {
+  margin-left: 30vw;
+  margin-right: 5vw;
 }
 
-.add-car-main > h2 {
-  text-align: left;
+.addCar > h2 {
+  margin-bottom: 3vw;
+  padding-top: 2rem;
+  margin-left: 18rem;
 }
 
-#form-btn {
-  margin-left: 1rem;
-  background: var(--green-color);
+#btn-add-car {
   border: none;
-  padding: 0.5rem 1.4rem;
+  background: var(--green-color);
+  padding: 0.7rem 1.4rem;
   font-size: 1.4rem;
+  color: white;
+  border-radius: 0.5rem;
 }
 
-.form-control-lg .form-control {
+.form-control-lg {
   width: 40vw;
 }
