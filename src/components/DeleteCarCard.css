@@ -1,29 +1,33 @@
-.d-rent-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 6rem;
-  text-align: right;
-}
-
 .d-car-image-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center; 
-  background-color: rgb(229 229 229);
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
 }
 
 .d-car-image {
   width: 25rem;
 }
 
+.delete-table {
+  width: 50%;
+  margin: 0;
+}
+
+.delete-table tr{
+  padding: 1rem;
+}
+
+.delete-table tr td{
+  width: 33%;
+}
+
+.td-checkbox {
+  padding: 18rem;
+}
+
 @media only screen and (min-width: 480px) {
   .d-rent-card {
     flex-direction: row;
-    gap: 12rem;
   }
 }
