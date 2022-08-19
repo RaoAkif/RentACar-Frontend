@@ -11,7 +11,7 @@
 
 #form-btn {
   margin-left: 10px;
-  background: #97bf0e;
+  background: var(--green-color);
   border: none;
   padding: 5px 10px;
   font-size: 12px;

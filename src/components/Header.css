@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-  color: #658200 !important;
+  color: var(--green-color) !important;
 }
 
 .navigation-menu li a {
@@ -160,7 +160,7 @@ a:hover {
   }
 
   .close-arrow:hover {
-    color: #658200 !important;
+    color: var(--green-color) !important;
   }
 
   .close-btn-mobile {

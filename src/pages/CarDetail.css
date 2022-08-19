@@ -35,7 +35,7 @@
 }
 
 #form-btn-cd {
-  background: #97bf0e;
+  background: var(--green-color);
   border: none;
   border-radius: 20px;
   width: 60%;
