@@ -17,13 +17,13 @@ const showDialog = (text) => {
 
 export const signinUser = createAsyncThunk('user/signinUser', async (name) => {
   const { data } = await axios.post(`${baseUrl}/sign_in`, { name });
-  localStorage.setItem('user', JSON.stringify(data.name));
+  localStorage.setItem('user', JSON.stringify({ id: data.id, name: data.name }));
   return data;
 });
 
 export const createUser = createAsyncThunk('user/createUser', async (name) => {
   const { data } = await axios.post(`${baseUrl}/users`, { name });
-  localStorage.setItem('user', JSON.stringify(data.name));
+  localStorage.setItem('user', JSON.stringify({ id: data.id, name: data.name }));
   return data;
 });
 
