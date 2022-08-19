@@ -4,18 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { addCar } from '../redux/car/car';
 import './AddCar.css';
 
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { addRental } from '../redux/rental/rentalsReducer';
-
 function AddCar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const obj = {
