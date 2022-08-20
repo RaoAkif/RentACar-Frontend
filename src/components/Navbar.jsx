@@ -118,23 +118,23 @@ function Navbar({ handleMenu, transitionState, transitions }) {
 Navbar.propTypes = {
   handleMenu: PropTypes.func.isRequired,
   transitionState: PropTypes.bool.isRequired,
-  transitions: PropTypes.arrayOf(PropTypes.shape({
-    entering: PropTypes.arrayOf(PropTypes.shape({
+  transitions: PropTypes.shape({
+    entering: PropTypes.shape({
       display: PropTypes.string,
-    })),
-    entered: PropTypes.arrayOf(PropTypes.shape({
+    }),
+    entered: PropTypes.shape({
       opacity: PropTypes.number,
       display: PropTypes.string,
-    })),
-    exiting: PropTypes.arrayOf(PropTypes.shape({
+    }),
+    exiting: PropTypes.shape({
       opacity: PropTypes.number,
       display: PropTypes.string,
-    })),
-    exited: PropTypes.arrayOf(PropTypes.shape({
+    }),
+    exited: PropTypes.shape({
       opacity: PropTypes.number,
       display: PropTypes.string,
-    })),
-  })),
+    }),
+  }),
 };
 
 Navbar.defaultProps = {

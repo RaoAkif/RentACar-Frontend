@@ -12,3 +12,9 @@
 .react-multi-carousel-list .carousel-container {
   margin-top: 20vh;
 }
+
+.rentalsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

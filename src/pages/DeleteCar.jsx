@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import CarCard from '../components/CarCard';
+import DeleteCarCard from '../components/DeleteCarCard';
 import { fetchCars, deleteCar } from '../redux/car/car';
 import './DeleteCar.css';
 
@@ -25,11 +25,12 @@ function DeleteCar() {
     navigate('/');
   };
 
-  const emptyCarsPage = <h2>There are no cars available</h2>;
+  const emptyCarsPage = <h2>There are no cars</h2>;
+
   const carsPage = (
     <div className="delete-car-main">
       <h2>DELETE&nbsp;&nbsp;CAR</h2>
-      <form className="d-cars-delete-cards">
+      <form className="d-cars-delete-cards" onSubmit={handleDelete}>
         <table className="table table-striped table-bordered delete-table">
           <thead className="table-dark">
             <tr>
@@ -42,6 +43,7 @@ function DeleteCar() {
             {cars.map((car) => (
               <DeleteCarCard
                 key={car.id}
+                id={car.id}
                 name={car.name}
                 model={car.model}
               />
