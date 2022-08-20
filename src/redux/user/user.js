@@ -4,15 +4,14 @@ import axios from 'axios';
 const baseUrl = 'https://rent-a-car-bk.herokuapp.com/api/v1/';
 
 const showDialog = (text) => {
-  const dialog = document.createElement('dialog');
-  const authPage = document.querySelector('.auth-page');
-  dialog.classList.add('dialog');
+  const dialog = document.createElement('div');
+  const authPage = document.querySelector('.form-group');
+  dialog.classList.add('show');
   dialog.innerHTML = `<p>${text}</p>`;
   authPage.appendChild(dialog);
-  dialog.showModal();
   setTimeout(() => {
-    dialog.close();
-  }, 2000);
+    dialog.remove();
+  }, 5000);
 };
 
 export const signinUser = createAsyncThunk('user/signinUser', async (name) => {
