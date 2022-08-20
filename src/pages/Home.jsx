@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/car/car';
 import CarCard from '../components/CarCard';
+import 'react-multi-carousel/lib/styles.css';
 import './Home.css';
 
 function Home() {
+  const dispatch = useDispatch();
+  const cars = useSelector((store) => store.car);
+
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -30,35 +37,28 @@ function Home() {
     },
   };
 
-  const dispatch = useDispatch();
-  const cars = useSelector((store) => store.car);
-
-  useEffect(() => {
-    dispatch(fetchCars());
-  }, [dispatch]);
-
   const emptyCarsPage = <h2>There are no cars available</h2>;
 
   const carsPage = (
     <Carousel responsive={responsive} className="carousel-container" infinite>
-      cars.map((car) => (
+      {cars.map((car) => (
         <div key={car.id}>
           <a href={`/car_detail/${car.id}`}>
             <CarCard
               key={car.id}
-              carName={car.name}
+              carName={car.carName}
               model={car.model}
-              price={car.rent}
+              price={car.price}
               image={car.image}
               city={car.city}
               date={car.date}
             />
           </a>
         </div>
-      ))
+      ))}
     </Carousel>
-  )
-  
+  );
+
   if (cars.length === 0) {
     return emptyCarsPage;
   }

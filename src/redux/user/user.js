@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/api/v1';
+const baseUrl = 'https://rent-a-car-bk.herokuapp.com/api/v1/';
 
 const showDialog = (text) => {
   const dialog = document.createElement('dialog');

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { addCar } from '../redux/car/car';
 import './AddCar.css';
 
@@ -8,7 +10,7 @@ function AddCar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmitCar = (e) => {
     e.preventDefault();
     const form = e.target;
     const obj = {
@@ -23,21 +25,33 @@ function AddCar() {
   };
 
   return (
-    <div className="addCar">
-      <h2>Add Car</h2>
-      <form className="addCarForm" onSubmit={handleSubmit}>
-        <input type="text" placeholder="Car Name" name="name" className="form-control form-control-lg" aria-label=".form-control-lg example" required />
-        <br />
-        <input type="text" placeholder="Model" name="model" className="form-control form-control-lg" aria-label=".form-control-lg" required />
-        <br />
-        <input type="text" placeholder="Image Url" name="image" className="form-control form-control-lg" aria-label=".form-control-lg" required />
-        <br />
-        <input type="textarea" placeholder="Description" name="desc" className="form-control form-control-lg" aria-label=".form-control-lg" required />
-        <br />
-        <input type="number" min="0.00" step="10.00" placeholder="Rent Cost" name="rent" className="form-control form-control-lg" aria-label=".form-control-lg" required />
-        <br />
-        <button id="btn-add-car" variant="primary" type="submit">Add Car</button>
-      </form>
+    <div className="add-car-main">
+      <Form className="addCar" onSubmit={handleSubmitCar}>
+        <h2 style={{ textAlign: 'center' }}>Add Car</h2>
+        <Form.Group className="form-control-lg">
+          <Form.Label>Car Name</Form.Label>
+          <Form.Control name="name" placeholder="Car Name" className="form-control-lg" />
+        </Form.Group>
+        <Form.Group className="form-control-lg">
+          <Form.Label>Car Model</Form.Label>
+          <Form.Control name="model" placeholder="Car Model" className="form-control-lg" />
+        </Form.Group>
+        <Form.Group className="form-control-lg">
+          <Form.Label>Image URL</Form.Label>
+          <Form.Control name="image" placeholder="https://example.com" className="form-control-lg" />
+        </Form.Group>
+        <Form.Group className="form-control-lg">
+          <Form.Label>Description</Form.Label>
+          <Form.Control name="desc" placeholder="Write the desription..." className="form-control-lg" />
+        </Form.Group>
+        <Form.Group className="form-control-lg" controlId="dob">
+          <Form.Label>Rent</Form.Label>
+          <Form.Control type="number" name="rent" placeholder="Rent Amout" />
+        </Form.Group>
+        <Button id="form-btn" variant="primary" type="submit">
+          Add Car
+        </Button>
+      </Form>
     </div>
   );
 }
