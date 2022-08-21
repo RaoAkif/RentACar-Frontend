@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/api/v1/';
+const baseUrl = 'https://rent-a-car-bk.herokuapp.com/api/v1/';
 const FETCH_CAR_DETAILS = 'FETCH_CAR_DETAILS';
 const initialState = [];
 

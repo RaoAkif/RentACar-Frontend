@@ -72,10 +72,8 @@
   margin-top: 2rem;
 }
 
-.dialog {
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 3rem;
-  color: rgb(255, 0, 0);
+.show {
+  display: flex;
+  font-size: 12px;
+  color: red;
 }

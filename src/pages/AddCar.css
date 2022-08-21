@@ -5,17 +5,17 @@
 
 .addCar > h2 {
   margin-bottom: 3vw;
-  padding-top: 20px;
-  margin-left: 180px;
+  padding-top: 2rem;
+  margin-left: 18rem;
 }
 
 #btn-add-car {
   border: none;
-  background: #97bf0e;
-  padding: 5px 10px;
-  font-size: 12px;
+  background: var(--green-color);
+  padding: 0.7rem 1.4rem;
+  font-size: 1.4rem;
   color: white;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .form-control-lg {

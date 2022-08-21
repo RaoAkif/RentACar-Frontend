@@ -10,13 +10,24 @@
 }
 
 #form-btn {
-  margin-left: 10px;
-  background: #97bf0e;
+  margin-left: 1rem;
+  background: var(--green-color);
   border: none;
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 0.5rem 1.4rem;
+  font-size: 1.4rem;
 }
 
 #formSelectCar {
-  width: 38.3vw;
+  width: 39vw;
+}
+
+.form-control-lg {
+  padding: 5px 5px;
+  font-size: 1.4rem;
+  margin-right: 0;
+}
+
+.form-control {
+  padding: 5px 5px;
+  font-size: 1.4rem;
 }

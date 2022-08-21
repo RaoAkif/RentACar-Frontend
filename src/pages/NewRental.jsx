@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-
-import './NewRental.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addRental } from '../redux/rental/rentalsReducer';
 import { fetchCars } from '../redux/car/car';
+import './NewRental.css';
 
 function NewRental() {
   const dispatch = useDispatch();
@@ -36,13 +34,13 @@ function NewRental() {
 
   const rentCar = (
     <div className="add-rental-main">
-      <h2>Rent A Car</h2>
       <Form onSubmit={handleSubmitRent}>
+        <h2 style={{ textAlign: 'center' }}>Rent A Car</h2>
         <Form.Group className=" form-control-lg" controlId="formSelectCar">
           <Form.Label>Select a Car</Form.Label>
           <Form.Select className="form-control-lg" name="car" id="car" value={selectCar} onChange={(e) => setSelectCar(e.target.value)}>
             {cars.map((car) => (
-              <option key={car.id} value={car.id}>
+              <option key={car} value={car.id}>
                 {`${car.name} ${car.model} ($${car.rent})`}
               </option>
             ))}

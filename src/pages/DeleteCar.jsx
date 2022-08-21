@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import CarCard from '../components/CarCard';
+import DeleteCarCard from '../components/DeleteCarCard';
 import { fetchCars, deleteCar } from '../redux/car/car';
 import './DeleteCar.css';
 
@@ -25,25 +25,32 @@ function DeleteCar() {
     navigate('/');
   };
 
-  const emptyCarsPage = <h2>There are no cars available</h2>;
+  const emptyCarsPage = <h2>There are no cars</h2>;
+
   const carsPage = (
     <div className="delete-car-main">
-      <h2>Delete Car</h2>
-      <form className="carsDelCards" onSubmit={handleDelete}>
-        {cars.map((car) => (
-          <div className="carDelCard" key={car.name}>
-            <CarCard
-              key={car.id}
-              carName={car.name}
-              model={car.model}
-              price={car.rent}
-              image={car.image}
-              desc={car.desc}
-            />
-            <input type="checkbox" name="delCar" id={car.id} />
-          </div>
-        ))}
-        <button type="submit">Remove Cars</button>
+      <h2>DELETE&nbsp;&nbsp;CAR</h2>
+      <form className="d-cars-delete-cards" onSubmit={handleDelete}>
+        <table className="table table-striped table-bordered delete-table">
+          <thead className="table-dark">
+            <tr>
+              <th className="th-checkbox" scope="col"> </th>
+              <th scope="col">Company</th>
+              <th scope="col">Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cars.map((car) => (
+              <DeleteCarCard
+                key={car.id}
+                id={car.id}
+                name={car.name}
+                model={car.model}
+              />
+            ))}
+          </tbody>
+        </table>
+        <button className="delete-btn" type="submit">Delete</button>
       </form>
     </div>
   );
