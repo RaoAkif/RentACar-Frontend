@@ -1,10 +1,27 @@
 import { Link, NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { GiTriangleTarget } from 'react-icons/gi';
+import { useEffect, useState } from 'react';
 import { ReactComponent as Logo } from '../img/rentacar_logo.svg';
 import './Header.css';
 
 function Navbar({ handleMobileMenu }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { name } = JSON.parse(localStorage.getItem('user')) || {};
+
+  useEffect(() => {
+    setIsLoggedIn(localStorage.getItem('user') !== null);
+  }, []);
+
+  const handleAuth = () => {
+    if (isLoggedIn) {
+      localStorage.removeItem('user');
+      setIsLoggedIn(false);
+    } else {
+      window.location.href = '/login';
+    }
+  };
+
   return (
     <nav className="navigation">
       <div className="navigation-menu">
@@ -16,6 +33,11 @@ function Navbar({ handleMobileMenu }) {
           <Logo />
         </Link>
         <ul>
+          <li>
+            <h1>
+              {isLoggedIn ? `User: ${name}` : 'Not logged in'}
+            </h1>
+          </li>
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -59,6 +81,15 @@ function Navbar({ handleMobileMenu }) {
               onClick={handleMobileMenu}
             >
               DELETE A CAR
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to="/login"
+              onClick={handleAuth}
+            >
+              {isLoggedIn ? 'LOGOUT' : 'LOGIN'}
             </NavLink>
           </li>
         </ul>
