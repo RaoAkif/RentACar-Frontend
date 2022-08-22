@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: center;
   background-image:
-  linear-gradient(black, black),
-  url("/src/assets/images/car_bg.jpg");
+    linear-gradient(black, black),
+    url("/src/assets/images/car_bg.jpg");
   background-blend-mode: saturation;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   max-width: 50rem;
   padding: 2rem;
   border-radius: 1rem;
-  background: rgba(255,255,255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .container h1 {
@@ -53,7 +53,7 @@
 
 .form button:hover {
   background-color: rgb(149, 190, 14, 0.8);
-  color: rgb(255, 255, 255, 0۔9);
+  color: rgb(255, 255, 255, 0.9);
 }
 
 .form-group {

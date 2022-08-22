@@ -26,8 +26,6 @@
 .name-model {
   display: flex;
   align-items: center;
-  padding: 0;
-  padding-top: 0.5rem;
   background-color: rgb(230, 228, 228);
   color: black;
   padding: 0.5rem 3rem;
