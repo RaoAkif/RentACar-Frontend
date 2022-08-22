@@ -63,3 +63,8 @@ p {
   color: black;
   padding-left: 2.5rem;
 }
+
+.carDesc {
+  width: 15vw;
+  text-align: justify;
+}
