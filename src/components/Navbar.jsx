@@ -8,7 +8,18 @@ import { ReactComponent as Logo } from '../img/rentacar_logo.svg';
 import './Header.css';
 
 function Navbar({ handleMenu, transitionState, transitions }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { name } = JSON.parse(localStorage.getItem('user')) || {};
   const [desktopState, setDesktopState] = useState(false);
+
+  const handleAuth = () => {
+    if (isLoggedIn) {
+      localStorage.removeItem('user');
+      setIsLoggedIn(false);
+    } else {
+      window.location.href = '/login';
+    }
+  };
 
   const handleWindowSize = () => {
     const resolution = window.innerWidth;
@@ -21,15 +32,16 @@ function Navbar({ handleMenu, transitionState, transitions }) {
     }
   };
 
+  useEffect(() => {
+    setIsLoggedIn(localStorage.getItem('user') !== null);
+    handleWindowSize();
+  }, [transitionState]);
+
   const handleCloseMenu = () => {
     if (!desktopState) {
       handleMenu();
     }
   };
-
-  useEffect(() => {
-    handleWindowSize();
-  }, [transitionState]);
 
   return (
     <Transition in={transitionState} timeout={300}>
@@ -56,6 +68,11 @@ function Navbar({ handleMenu, transitionState, transitions }) {
               <Logo />
             </Link>
             <ul>
+              <li>
+                <h1>
+                  {isLoggedIn ? `User: ${name}` : 'Not logged in'}
+                </h1>
+              </li>
               <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
@@ -99,6 +116,15 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                   onClick={handleCloseMenu}
                 >
                   DELETE A CAR
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  to="/login"
+                  onClick={handleAuth}
+                >
+                  {isLoggedIn ? 'LOGOUT' : 'LOGIN'}
                 </NavLink>
               </li>
             </ul>
