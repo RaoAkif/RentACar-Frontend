@@ -6,7 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/src/assets/images/car_bg.jpg");
+  background-image:
+    linear-gradient(black, black),
+    url("/src/assets/images/car_bg.jpg");
+  background-blend-mode: saturation;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -21,8 +24,7 @@
   max-width: 50rem;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .container h1 {
@@ -39,15 +41,19 @@
 }
 
 .form button {
-  width: 100%;
-  height: 5rem;
   border: none;
   border-radius: 0.5rem;
   background: #97bf0e;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+.form button:hover {
+  background-color: rgb(149, 190, 14, 0.8);
+  color: rgb(255, 255, 255, 0.9);
 }
 
 .form-group {
@@ -60,7 +66,7 @@
 }
 
 .form-control {
-  width: 100%;
+  display: flex;
   padding: 0.5rem;
   margin: 0.5rem 0;
   border: 2px solid #ccc;
@@ -76,4 +82,17 @@
   display: flex;
   font-size: 12px;
   color: red;
+}
+
+.form-group input {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: 4rem;
+  font-size: 2rem;
+}
+
+.form-logo {
+  width: 15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }

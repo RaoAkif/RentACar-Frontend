@@ -16,7 +16,6 @@ function Navbar({ handleMenu, transitionState, transitions }) {
     if (isLoggedIn) {
       localStorage.removeItem('user');
       setIsLoggedIn(false);
-    } else {
       window.location.href = '/login';
     }
   };
@@ -69,9 +68,12 @@ function Navbar({ handleMenu, transitionState, transitions }) {
             </Link>
             <ul>
               <li>
-                <h1>
-                  {isLoggedIn ? `User: ${name}` : 'Not logged in'}
-                </h1>
+                <p className="user-name">
+                  Signed in as
+                  <span>
+                    {name}
+                  </span>
+                </p>
               </li>
               <li>
                 <NavLink

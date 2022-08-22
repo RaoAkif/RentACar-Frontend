@@ -26,8 +26,11 @@
 .name-model {
   display: flex;
   align-items: center;
-  padding: 0;
-  padding-top: 0.5rem;
+  background-color: rgb(230, 228, 228);
+  color: black;
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -35,7 +38,7 @@ p {
 }
 
 .name-model > p {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 #form-btn-cd {
@@ -52,4 +55,14 @@ p {
 .carPrice {
   background-color: rgb(221, 220, 220);
   padding: 0.5rem 6.7rem;
+}
+
+.rent-card-info > p {
+  color: black;
+  padding-left: 2.5rem;
+}
+
+.carDesc {
+  width: 15vw;
+  text-align: right;
 }
