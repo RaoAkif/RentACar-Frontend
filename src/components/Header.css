@@ -111,6 +111,19 @@ a:hover {
   top: 2rem;
 }
 
+
+.user-name {
+  padding: 0.2rem; 
+  margin: 0 0 2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.user-name span {
+  display: block;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 480px) {
   .navigation {
     width: 20rem;
