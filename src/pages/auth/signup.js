@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../../redux/user/user';
+import './auth.css';
 
 export default function signup() {
   const [name, setName] = useState('');
@@ -12,20 +13,17 @@ export default function signup() {
   return (
     <div className="auth-page">
       <div className="container">
-        <h1>Signup</h1>
+        <img className="form-logo" src={require('../../img/rentacar_logo.png')} alt="logo" />
         <form className="form" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">
-              Name
-              <br />
-              <input
-                type="text"
-                id="name"
-                className="form-control"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </label>
+            <input
+              type="text"
+              id="name"
+              className="form-control"
+              value={name}
+              placeholder="Name..."
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <button type="submit" className="btn">Signup</button>
         </form>

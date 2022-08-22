@@ -13,20 +13,17 @@ export default function login() {
   return (
     <div className="auth-page">
       <div className="container">
-        <h1>Login</h1>
+        <img className="form-logo" src={require('../../img/rentacar_logo.png')} alt="logo" />
         <form action="" className="form" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">
-              Name
-              <br />
-              <input
-                type="text"
-                id="name"
-                className="form-control"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </label>
+            <input
+              type="text"
+              id="name"
+              className="form-control"
+              value={name}
+              placeholder="Name..."
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <button type="submit" className="btn">Login</button>
         </form>
