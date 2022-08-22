@@ -11,11 +11,12 @@ import Signup from './pages/auth/signup';
 import Header from './components/Header';
 
 function App() {
+  const user = localStorage.getItem('user');
   return (
     <BrowserRouter>
-      <Header />
+      { user && <Header /> }
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={user ? <Home /> : <Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/rentals" element={<Rentals />} />
