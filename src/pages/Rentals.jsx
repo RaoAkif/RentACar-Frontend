@@ -51,7 +51,7 @@ function Rentals() {
             key={rent.id}
             carName={rent.car.name}
             model={rent.car.model}
-            price={rent.car.price}
+            price={rent.car.rent}
             image={rent.car.image}
             city={rent.city}
             date={rent.date}

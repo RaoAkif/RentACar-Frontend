@@ -20,7 +20,7 @@ function CarDetail() {
 
   return (
     <div className="carDetail">
-      <div className="car-image-div"><img className="car-image" src={car.image} alt={car.name + car.model} /></div>
+      <div className="car-image-div"><img className="car-image" src={car.image} alt={car.name} /></div>
       <div className="carInfo">
         <div className="name-model">
           <h3>{car.name}</h3>

@@ -46,9 +46,9 @@ function Home() {
           <a href={`/car_detail/${car.id}`}>
             <CarCard
               key={car.id}
-              carName={car.carName}
+              carName={car.name}
               model={car.model}
-              price={car.price}
+              price={car.rent}
               image={car.image}
               city={car.city}
               date={car.date}
