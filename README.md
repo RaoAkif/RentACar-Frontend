@@ -7,8 +7,8 @@
 **[Back-End](https://github.com/RaoAkif/RentACar-Backend)**
 
 ## Get Started
- * [Netlify Live](https://RentACar-raoakif.netlify.app/)
- * [Heroku Live](https://RentACar-raoakif.herokuapp.com/)
+ * [Netlify Live](https://https://rent-a-car-frontend.netlify.app/)
+ * [Heroku Live](https://rent-a-car-bk.herokuapp.com/api/v1/)
 
 
 # Getting Started with Create React App
