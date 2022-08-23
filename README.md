@@ -7,7 +7,7 @@
 **[Back-End](https://github.com/RaoAkif/RentACar-Backend)**
 
 ## Get Started
- * [Netlify Live](https://https://rent-a-car-frontend.netlify.app/)
+ * [Netlify Live](https://rent-a-car-frontend.netlify.app/)
  * [Heroku Live](https://rent-a-car-bk.herokuapp.com/api/v1/)
 
 
