@@ -1,0 +1,60 @@
+.latest-models-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container a {
+  all: unset;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow {
+  display: none;
+}
+
+.react-multiple-carousel__arrow--left {
+  border-radius: 0 4rem 4rem 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  border-radius: 4rem 0 0 4rem;
+}
+
+.react-multiple-carousel__arrow::before {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem 2.4rem 2rem 0;
+  cursor: pointer;
+  display: block;
+}
+
+@media only screen and (min-width: 480px) {
+  .latest-models-main {
+    padding-left: 14rem;
+  }
+
+  .carousel-container {
+    width: 70%;
+  }
+
+  .react-multiple-carousel__arrow {
+    margin-left: -5rem;
+    margin-right: -5rem;
+    width: 6rem;
+    height: 6rem;
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    background-color: var(--green-color);
+  }
+}

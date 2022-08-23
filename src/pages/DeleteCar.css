@@ -1,0 +1,63 @@
+.delete-car-main {
+  width: 100%;
+  height: 100vh;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+    linear-gradient(black, black),
+    url("/src/assets/images/car-wallpaper.jpg");
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(212, 216, 221, 0.9);
+}
+
+.d-cars-delete-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-car-image-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-car-image {
+  width: 100px;
+}
+
+.delete-table {
+  width: 90%;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.delete-table tr {
+  padding: 4rem;
+}
+
+.delete-table tr td {
+  padding: 1rem;
+}
+
+.th-checkbox {
+  width: 10px;
+}
+
+.td-checkbox {
+  padding: 18rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .delete-table {
+    width: 30%;
+  }
+}
