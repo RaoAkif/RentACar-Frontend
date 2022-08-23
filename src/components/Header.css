@@ -4,6 +4,7 @@ header {
 
 .close-arrow,
 .hamburger {
+  position: absolute;
   height: 4rem;
   width: 4rem;
   margin: 2rem;
@@ -45,7 +46,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 4rem;
-  margin: 2rem 0 6rem 0;
+  margin: 2rem 0 3rem 0;
   color: #444;
 }
 
@@ -57,7 +58,6 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 1.8rem;
   font-weight: bold;
   background-color: #fff;
   padding: 0;
@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-  color: var(--green-color) !important;
+  color: var(--dark-green-color) !important;
 }
 
 .navigation-menu li a {
@@ -82,7 +82,8 @@ a:hover {
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  font-size: 1.8rem;
 }
 
 .navigation-menu li:hover {
@@ -112,8 +113,8 @@ a:hover {
 }
 
 .user-name {
-  padding: 0.2rem;
-  margin: 0 0 2rem 2rem;
+  display: flex;
+  margin-bottom: 4rem;
   font-size: 1.6rem;
   font-weight: normal;
 }
@@ -134,7 +135,7 @@ a:hover {
 
   .navigation-menu ul {
     font-size: 1.6rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
 
   .navigation-menu li {
@@ -177,5 +178,17 @@ a:hover {
 
   .close-btn-mobile {
     display: none;
+  }
+
+  .user-name {
+    display: block;
+    padding: 0.2rem;
+    margin: 0 0 2rem -3rem;
+    font-size: 1.6rem;
+  }
+
+  .user-name span {
+    display: block;
+    font-weight: bold;
   }
 }

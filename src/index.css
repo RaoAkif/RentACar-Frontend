@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap');
+
 :root {
   --green-color: #97bf0e;
+  --dark-green-color: #617c00;
+  --blue-color: #48bab5;
+  --orange-color: #f5c702;
 }
 
 * {
@@ -10,6 +15,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Montserrat', Arial, serif;
 }
 
 body {
@@ -28,6 +34,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  margin: 10rem 0 4rem 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.btn {
+  min-width: 10rem;
+  border-radius: 4rem 4rem 4rem 4rem;
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  align-self: center;
+}
+
+.btn-white {
+  color: var(--green-color);
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: var(--green-color);
+  border: 1px solid var(--green-color);
+}
+
+.btn-white:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: transparent;
+  border: 1px solid var(--green-color);
+  color: var(--green-color);
 }
 
 /* Styles to MOVE */

@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { Transition } from 'react-transition-group';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GiTriangleTarget } from 'react-icons/gi';
-import { ReactComponent as Logo } from '../img/rentacar_logo.svg';
+import { ReactComponent as Logo } from '../assets/images/rentacar_logo.svg';
 import './Header.css';
 
 function Navbar({ handleMenu, transitionState, transitions }) {
@@ -66,15 +66,13 @@ function Navbar({ handleMenu, transitionState, transitions }) {
             >
               <Logo />
             </Link>
+
+            <p className="user-name">
+              Signed in as&nbsp;
+              <span>{name}</span>
+            </p>
+
             <ul>
-              <li>
-                <p className="user-name">
-                  Signed in as
-                  <span>
-                    {name}
-                  </span>
-                </p>
-              </li>
               <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
@@ -82,6 +80,15 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                   onClick={handleCloseMenu}
                 >
                   CARS
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  to="/add_rental"
+                  onClick={handleCloseMenu}
+                >
+                  NEW RENTAL
                 </NavLink>
               </li>
               <li>
@@ -96,19 +103,10 @@ function Navbar({ handleMenu, transitionState, transitions }) {
               <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
-                  to="/add_rental"
-                  onClick={handleCloseMenu}
-                >
-                  ADD A RENTAL
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) => (isActive ? 'active' : '')}
                   to="/add_car"
                   onClick={handleCloseMenu}
                 >
-                  ADD A CAR
+                  ADD CAR
                 </NavLink>
               </li>
               <li>
@@ -117,7 +115,7 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                   to="/delete_car"
                   onClick={handleCloseMenu}
                 >
-                  DELETE A CAR
+                  DELETE CAR
                 </NavLink>
               </li>
               <li>

@@ -17,14 +17,30 @@ function RentCard(props) {
       <div className="car-image-div">
         <img className="car-image" src={image} alt={carName} />
       </div>
-      <div className="rent-card-info">
-        <div className="name-model">
-          <h3>{carName}</h3>
-          <p>{model}</p>
-        </div>
-        <p>{price}</p>
-        <p>{city}</p>
-        <p>{date}</p>
+
+      <div className="rent-car-info">
+        <h3>{carName}</h3>
+
+        <table className="table table-striped table-bordered rent-table">
+          <tbody>
+            <tr>
+              <td className="text-start"><span>Model:</span></td>
+              <td className="text-end">{model}</td>
+            </tr>
+            <tr>
+              <td className="text-start"><span>Rent:</span></td>
+              <td className="text-end">{price}</td>
+            </tr>
+            <tr>
+              <td className="text-start"><span>City:</span></td>
+              <td className="text-end">{city}</td>
+            </tr>
+            <tr>
+              <td className="text-start"><span>Date:</span></td>
+              <td className="text-end">{date}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

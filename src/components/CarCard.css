@@ -4,23 +4,52 @@
   align-items: center;
 }
 
+.rental-carousel-container {
+  width: 100%;
+}
+
 .car-image-div {
-  background-color: rgb(229 229 229);
-  padding: 2rem;
-  border-radius: 50%;
-  margin-top: 10vh;
+  width: 14rem;
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .car-image {
-  width: 25rem;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 
-.name-model {
-  display: flex;
-  align-items: baseline;
+.rent-car-info {
+  margin-bottom: 4rem;
 }
 
-.name-model > p {
-  padding-left: 1rem;
+.rent-car-info h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.rent-table {
+  width: 20rem;
+  font-size: 1.6rem;
+}
+
+.rent-table span {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 480px) {
+  .rental-carousel-container {
+    width: 70%;
+  }
+
+  .rent-car-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .rent-table {
+    width: 14rem;
+    font-size: 1.2rem;
+  }
 }
