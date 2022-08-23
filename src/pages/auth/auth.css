@@ -13,7 +13,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: inset 0 0 0 2000px rgba(124, 184, 13, 0.76);
+  box-shadow: inset 0 0 0 2000px rgba(150, 190, 3, 0.76);
+}
+
+.orange {
+  box-shadow: inset 0 0 0 2000px rgba(244, 181, 1, 0.9);
 }
 
 .container {
@@ -22,7 +26,7 @@
   align-items: center;
   width: 100%;
   max-width: 50rem;
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.8);
 }
@@ -38,22 +42,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.form button {
-  border: none;
-  border-radius: 0.5rem;
-  background: #97bf0e;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.5rem 1.5rem;
-}
-
-.form button:hover {
-  background-color: rgb(149, 190, 14, 0.8);
-  color: rgb(255, 255, 255, 0.9);
 }
 
 .form-group {
@@ -75,7 +63,7 @@
 
 .navi-option {
   font-size: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .show {
@@ -88,7 +76,9 @@
   margin-top: 30px;
   margin-bottom: 10px;
   height: 4rem;
-  font-size: 2rem;
+  border-radius: 4rem 4rem 4rem 4rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
 }
 
 .form-logo {

@@ -1,0 +1,63 @@
+.rent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-car-image-div {
+  width: 20rem;
+  height: 20rem;
+  background-color: rgb(229 229 229);
+  padding: 2rem;
+  border-radius: 50%;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-car-image {
+  width: 28rem;
+  margin-bottom: 2rem;
+}
+
+.home-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.home-name-model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.home-name-model h3 {
+  font-size: 2rem;
+}
+
+.home-name-model .model {
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+.home-card-info p {
+  color: grey;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .home-name-model h3 {
+    font-size: 1.8rem;
+  }
+
+  .home-card-info p {
+    font-size: 1.6rem;
+  }
+}
