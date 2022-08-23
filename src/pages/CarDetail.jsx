@@ -19,16 +19,29 @@ function CarDetail() {
   };
 
   return (
-    <div className="carDetail">
-      <div className="car-image-div"><img className="car-image" src={car.image} alt={car.name} /></div>
-      <div className="carInfo">
-        <div className="name-model">
-          <h3>{car.name}</h3>
-          <p>{car.model}</p>
-        </div>
-        <p className="carPrice">{car.rent}</p>
-        <p className="carDesc">{car.desc}</p>
-        <button id="form-btn-cd" type="button" onClick={redirectHandler}>Rent</button>
+    <div className="car-detail">
+      <div className="details-image-div">
+        <img className="details-image" src={car.image} alt={car.name} />
+      </div>
+
+      <div className="car-info">
+        <h3>{car.name}</h3>
+
+        <table className="table table-striped table-bordered details-table">
+          <tbody>
+            <tr>
+              <td className="text-start"><span>Model:</span></td>
+              <td className="text-end">{car.model}</td>
+            </tr>
+            <tr>
+              <td className="text-start"><span>Rent:</span></td>
+              <td className="text-end">{car.rent}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p className="car-desc">{car.desc}</p>
+        <button className="btn btn-green" id="form-btn-cd" type="button" onClick={redirectHandler}>Rent</button>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ function DeleteCar() {
 
   const carsPage = (
     <div className="delete-car-main">
-      <h2>DELETE&nbsp;&nbsp;CAR</h2>
+      <h2 className="title">DELETE&nbsp;&nbsp;CAR</h2>
       <form className="d-cars-delete-cards" onSubmit={handleDelete}>
         <table className="table table-striped table-bordered delete-table">
           <thead className="table-dark">
@@ -50,7 +50,7 @@ function DeleteCar() {
             ))}
           </tbody>
         </table>
-        <button className="delete-btn" type="submit">Delete</button>
+        <button className="btn btn-green" type="submit">Delete</button>
       </form>
     </div>
   );

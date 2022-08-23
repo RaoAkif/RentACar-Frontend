@@ -17,15 +17,15 @@ function Rentals() {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 1,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 1,
+      items: 4,
     },
     laptop: {
       breakpoint: { max: 1024, min: 768 },
-      items: 1,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
@@ -44,22 +44,25 @@ function Rentals() {
   const emptyRentalsPage = <h2>You don&apos;t have any rentals yet</h2>;
 
   const rentalsPage = (
-    <Carousel responsive={responsive} className="carousel-container" infinite>
-      {rentals.map((rent) => (
-        <div className="rentalsPage" key={rent.id}>
-          <CarCard
-            key={rent.id}
-            carName={rent.car.name}
-            model={rent.car.model}
-            price={rent.car.rent}
-            image={rent.car.image}
-            city={rent.city}
-            date={rent.date}
-          />
-          <button className="delete-btn" type="button" onClick={() => handleDelete(rent.id)}>Delete</button>
-        </div>
-      ))}
-    </Carousel>
+    <div className="rentals-main">
+      <h2 className="title">RENTALS</h2>
+      <Carousel responsive={responsive} className="rental-carousel-container" infinite>
+        {rentals.map((rent) => (
+          <div className="rentals-page" key={rent.id}>
+            <CarCard
+              key={rent.id}
+              carName={rent.car.name}
+              model={rent.car.model}
+              price={rent.car.rent}
+              image={rent.car.image}
+              city={rent.city}
+              date={rent.date}
+            />
+            <button className="btn btn-green" type="button" onClick={() => handleDelete(rent.id)}>Delete</button>
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 
   if (rentals.length === 0) {

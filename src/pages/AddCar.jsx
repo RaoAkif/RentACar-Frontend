@@ -26,29 +26,24 @@ function AddCar() {
 
   return (
     <div className="add-car-main">
-      <Form className="addCar" onSubmit={handleSubmitCar}>
-        <h2 style={{ textAlign: 'center' }}>Add Car</h2>
+      <h2 className="title">ADD&nbsp;&nbsp;CAR</h2>
+      <Form className="add-car-form" onSubmit={handleSubmitCar}>
         <Form.Group className="form-control-lg">
-          <Form.Label>Car Name</Form.Label>
           <Form.Control name="name" placeholder="Car Name" className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg">
-          <Form.Label>Car Model</Form.Label>
           <Form.Control name="model" placeholder="Car Model" className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg">
-          <Form.Label>Image URL</Form.Label>
-          <Form.Control name="image" placeholder="https://example.com" className="form-control-lg" />
+          <Form.Control name="image" placeholder="Image URL" className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg">
-          <Form.Label>Description</Form.Label>
           <Form.Control name="desc" placeholder="Write the desription..." className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg" controlId="dob">
-          <Form.Label>Rent</Form.Label>
-          <Form.Control type="number" name="rent" placeholder="Rent Amout" />
+          <Form.Control type="number" name="rent" placeholder="Rent Amount" />
         </Form.Group>
-        <Button id="form-btn" variant="primary" type="submit">
+        <Button className="btn btn-white" id="form-btn" variant="primary" type="submit">
           Add Car
         </Button>
       </Form>

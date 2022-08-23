@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { addRental } from '../redux/rental/rentalsReducer';
 import { fetchCars } from '../redux/car/car';
 import './NewRental.css';
+// https://www.pixelstalk.net/wp-content/uploads/images6/BMW-Wallpaper-4K-Desktop.jpg
 
 function NewRental() {
   const dispatch = useDispatch();
@@ -34,11 +35,11 @@ function NewRental() {
 
   const rentCar = (
     <div className="add-rental-main">
-      <Form onSubmit={handleSubmitRent}>
-        <h2 style={{ textAlign: 'center' }}>Rent A Car</h2>
+      <Form className="add-rental-form" onSubmit={handleSubmitRent}>
+        <h2 className="title">NEW&nbsp;&nbsp;RENTAL</h2>
         <Form.Group className=" form-control-lg" controlId="formSelectCar">
-          <Form.Label>Select a Car</Form.Label>
-          <Form.Select className="form-control-lg" name="car" id="car" value={selectCar} onChange={(e) => setSelectCar(e.target.value)}>
+          <Form.Select name="car" id="car" value={selectCar} onChange={(e) => setSelectCar(e.target.value)}>
+            <option value="">Select a Car</option>
             {cars.map((car) => (
               <option key={car.id} value={car.id}>
                 {`${car.name} ${car.model} ($${car.rent})`}
@@ -46,16 +47,14 @@ function NewRental() {
             ))}
           </Form.Select>
         </Form.Group>
-        <Form.Group className="mb-3 form-control-lg" controlId="formGridAddress1">
-          <Form.Label>City</Form.Label>
+        <Form.Group className="form-control-lg" controlId="formGridAddress1">
           <Form.Control name="city" placeholder="City Name" />
         </Form.Group>
-        <Form.Group className="mb-3 form-control-lg" controlId="dob">
-          <Form.Label>Select Date</Form.Label>
+        <Form.Group className="form-control-lg" controlId="dob">
           <Form.Control type="date" name="date" placeholder="Date of Birth" />
         </Form.Group>
 
-        <Button id="form-btn" variant="primary" type="submit">
+        <Button className="btn btn-white" id="form-btn" variant="primary" type="submit">
           Submit
         </Button>
       </Form>

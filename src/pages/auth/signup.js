@@ -11,9 +11,9 @@ export default function signup() {
     dispatch(createUser(name));
   };
   return (
-    <div className="auth-page">
+    <div className="auth-page orange">
       <div className="container">
-        <img className="form-logo" src={require('../../img/rentacar_logo.png')} alt="logo" />
+        <img className="form-logo" src={require('../../assets/images/rentacar_logo.png')} alt="logo" />
         <form className="form" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -25,7 +25,7 @@ export default function signup() {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn">Signup</button>
+          <button type="submit" className="btn btn-green">Signup</button>
         </form>
         <div className="navi-option">
           <p>

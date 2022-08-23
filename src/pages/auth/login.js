@@ -13,7 +13,7 @@ export default function login() {
   return (
     <div className="auth-page">
       <div className="container">
-        <img className="form-logo" src={require('../../img/rentacar_logo.png')} alt="logo" />
+        <img className="form-logo" src={require('../../assets/images/rentacar_logo.png')} alt="logo" />
         <form action="" className="form" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -25,7 +25,7 @@ export default function login() {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn">Login</button>
+          <button type="submit" className="btn btn-green">Login</button>
         </form>
         <div className="navi-option">
           <p>
