@@ -6,7 +6,7 @@ import { render } from '@testing-library/react';
 import CarDetail from '../pages/CarDetail';
 
 describe('CarDetail', () => {  
-  it('should render correctly', () => {
+  it("should render correctly", () => {
     const { container } = render(
       <BrowserRouter>
         <Provider store={store}>

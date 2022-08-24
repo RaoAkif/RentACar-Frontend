@@ -6,7 +6,7 @@ import { render } from '@testing-library/react';
 import Signup from '../pages/auth/signup';
 
 describe('Signup', () => {  
-  it('should render correctly', () => {
+  it("should render correctly", () => {
     const { container } = render(
       <BrowserRouter>
         <Provider store={store}>
