@@ -7,6 +7,7 @@ import { addCar } from '../redux/car/car';
 import './AddCar.css';
 
 function AddCar() {
+  const [car, setCar] = React.useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,7 +30,26 @@ function AddCar() {
       <h2 className="title">ADD&nbsp;&nbsp;CAR</h2>
       <Form className="add-car-form" onSubmit={handleSubmitCar}>
         <Form.Group className="form-control-lg">
-          <Form.Control name="name" placeholder="Car Name" className="form-control-lg" />
+          <Form.Control
+            as="select"
+            value={car}
+            onChange={(e) => {
+              setCar(e.target.value);
+            }}
+          >
+            <option>Select a Car</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="GMC">GMC</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Toyota">Toyota</option>
+          </Form.Control>
         </Form.Group>
         <Form.Group className="form-control-lg">
           <Form.Control name="model" placeholder="Car Model" className="form-control-lg" />
