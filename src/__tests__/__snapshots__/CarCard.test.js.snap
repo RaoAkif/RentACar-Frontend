@@ -9,13 +9,17 @@ exports[`CarCard should render correctly 1`] = `
       class="car-image-div"
     >
       <img
+        alt="Audi"
         class="car-image"
+        src="https://www.audi.com/content/dam/audi/us/en/all-models/a4/a4-allroad-quattro/2020/models-a4-allroad-quattro-2020-hero.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg"
       />
     </div>
     <div
       class="rent-car-info"
     >
-      <h3 />
+      <h3>
+        Audi
+      </h3>
       <table
         class="table table-striped table-bordered rent-table"
       >
@@ -30,7 +34,9 @@ exports[`CarCard should render correctly 1`] = `
             </td>
             <td
               class="text-end"
-            />
+            >
+              R3
+            </td>
           </tr>
           <tr>
             <td
@@ -42,7 +48,9 @@ exports[`CarCard should render correctly 1`] = `
             </td>
             <td
               class="text-end"
-            />
+            >
+              100
+            </td>
           </tr>
           <tr>
             <td
