@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarCard should render correctly 1`] = `
+<div>
+  <div
+    class="rent-card"
+  >
+    <div
+      class="car-image-div"
+    >
+      <img
+        class="car-image"
+      />
+    </div>
+    <div
+      class="rent-car-info"
+    >
+      <h3 />
+      <table
+        class="table table-striped table-bordered rent-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                Model:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                Rent:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                City:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                Date:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  ,
+</div>
+`;
