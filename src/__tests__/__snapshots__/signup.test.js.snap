@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup should render correctly 1`] = `
+<div>
+  <div
+    class="auth-page orange"
+  >
+    <div
+      class="container"
+    >
+      <img
+        alt="logo"
+        class="form-logo"
+        src="rentacar_logo.png"
+      />
+      <form
+        class="form"
+        method="POST"
+      >
+        <div
+          class="form-group"
+        >
+          <input
+            class="form-control"
+            id="name"
+            placeholder="Name..."
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-green"
+          type="submit"
+        >
+          Signup
+        </button>
+      </form>
+      <div
+        class="navi-option"
+      >
+        <p>
+          Already have an account?
+          <a
+            href="/login"
+          >
+             Login
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  ,
+</div>
+`;
