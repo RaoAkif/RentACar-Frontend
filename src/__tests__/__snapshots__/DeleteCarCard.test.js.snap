@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteCarCard should render correctly 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <th
+          class="td-checkbox"
+          scope="row"
+        >
+          <input
+            id="1"
+            name="delCar"
+            type="checkbox"
+          />
+        </th>
+        <td
+          class="text-start"
+        >
+          Audi
+        </td>
+        <td
+          class="text-start"
+        >
+          R3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  ,
+</div>
+`;
