@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarDetail should render correctly 1`] = `
+<div>
+  <div
+    class="car-detail"
+  >
+    <div
+      class="details-image-div"
+    >
+      <img
+        class="details-image"
+      />
+    </div>
+    <div
+      class="car-info"
+    >
+      <h3 />
+      <table
+        class="table table-striped table-bordered details-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                Model:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+          <tr>
+            <td
+              class="text-start"
+            >
+              <span>
+                Rent:
+              </span>
+            </td>
+            <td
+              class="text-end"
+            />
+          </tr>
+        </tbody>
+      </table>
+      <p
+        class="car-desc"
+      />
+      <button
+        class="btn btn-green"
+        id="form-btn-cd"
+        type="button"
+      >
+        Rent
+      </button>
+    </div>
+  </div>
+  ,
+</div>
+`;
