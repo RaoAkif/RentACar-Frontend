@@ -31,6 +31,7 @@ function AddCar() {
       <Form className="add-car-form" onSubmit={handleSubmitCar}>
         <Form.Group className="form-control-lg">
           <Form.Control
+            name="name"
             as="select"
             value={car}
             onChange={(e) => {
