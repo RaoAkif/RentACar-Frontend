@@ -59,7 +59,7 @@ function AddCar() {
           <Form.Control name="image" placeholder="Image URL" className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg">
-          <Form.Control name="desc" placeholder="Write the desription..." className="form-control-lg" />
+          <Form.Control as="textarea" rows={3} name="desc" placeholder="Write the desription..." className="form-control-lg" />
         </Form.Group>
         <Form.Group className="form-control-lg" controlId="dob">
           <Form.Control type="number" name="rent" placeholder="Rent Amount" />
