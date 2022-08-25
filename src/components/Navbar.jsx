@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { Transition } from 'react-transition-group';
@@ -7,7 +7,9 @@ import { GiTriangleTarget } from 'react-icons/gi';
 import { ReactComponent as Logo } from '../assets/images/rentacar_logo.svg';
 import './Header.css';
 
-function Navbar({ handleMenu, transitionState, transitions }) {
+function Navbar({
+  handleCloseMenu, setTransitionState, transitionState, transitions,
+}) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { name } = JSON.parse(localStorage.getItem('user')) || {};
   const [desktopState, setDesktopState] = useState(false);
@@ -20,7 +22,32 @@ function Navbar({ handleMenu, transitionState, transitions }) {
     }
   };
 
-  const handleWindowSize = () => {
+  // Reload the page on windows rezise to close the navbar.
+  const handleResize = () => {
+    window.location.reload();
+  };
+  window.addEventListener('resize', handleResize);
+
+  /* Open the navbar on desktop version
+  and close it on mobile version
+  when the page is rendered. */
+  const handleTransitionState = async () => {
+    const resolution = window.innerWidth;
+    const isMobile = resolution >= 0 && resolution <= 480;
+    const isDesktop = !isMobile;
+    if (isDesktop) {
+      setTransitionState(true);
+    } else {
+      setTransitionState(false);
+    }
+  };
+
+  useEffect(() => {
+    handleTransitionState();
+  }, []);
+
+  // Get the windows size when the hamburger icon is clicked.
+  const handleWindowSize = async () => {
     const resolution = window.innerWidth;
     const isMobile = resolution >= 0 && resolution <= 480;
     const isDesktop = !isMobile;
@@ -36,14 +63,17 @@ function Navbar({ handleMenu, transitionState, transitions }) {
     handleWindowSize();
   }, [transitionState]);
 
-  const handleCloseMenu = () => {
+  // Close the navbar when a link is clicked
+  const handleMenu = () => {
     if (!desktopState) {
-      handleMenu();
+      handleCloseMenu();
     }
   };
 
+  const nodeRef = useRef(null);
+
   return (
-    <Transition in={transitionState} timeout={300}>
+    <Transition nodeRef={nodeRef} in={transitionState} timeout={300}>
       {(state) => (
         <nav
           style={{
@@ -56,13 +86,13 @@ function Navbar({ handleMenu, transitionState, transitions }) {
         >
           <AiOutlineClose
             className="close-btn-mobile"
-            onClick={handleMenu}
+            onClick={handleCloseMenu}
           />
           <div className="navigation-menu">
             <Link
               className="logo"
               to="/"
-              onClick={handleCloseMenu}
+              onClick={handleMenu}
             >
               <Logo />
             </Link>
@@ -75,9 +105,9 @@ function Navbar({ handleMenu, transitionState, transitions }) {
             <ul>
               <li>
                 <NavLink
-                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  className={({ isActive }) => (isActive ? 'active sep' : 'sep')}
                   to="/"
-                  onClick={handleCloseMenu}
+                  onClick={handleMenu}
                 >
                   CARS
                 </NavLink>
@@ -86,7 +116,7 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
                   to="/add_rental"
-                  onClick={handleCloseMenu}
+                  onClick={handleMenu}
                 >
                   NEW RENTAL
                 </NavLink>
@@ -95,16 +125,16 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
                   to="/rentals"
-                  onClick={handleCloseMenu}
+                  onClick={handleMenu}
                 >
                   RENTALS
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  className={({ isActive }) => (isActive ? 'active sep' : 'sep')}
                   to="/add_car"
-                  onClick={handleCloseMenu}
+                  onClick={handleMenu}
                 >
                   ADD CAR
                 </NavLink>
@@ -113,18 +143,18 @@ function Navbar({ handleMenu, transitionState, transitions }) {
                 <NavLink
                   className={({ isActive }) => (isActive ? 'active' : '')}
                   to="/delete_car"
-                  onClick={handleCloseMenu}
+                  onClick={handleMenu}
                 >
                   DELETE CAR
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  className={({ isActive }) => (isActive ? 'active sep' : 'sep')}
                   to="/login"
                   onClick={handleAuth}
                 >
-                  {isLoggedIn ? 'LOGOUT' : 'LOGIN'}
+                  LOGOUT
                 </NavLink>
               </li>
             </ul>
@@ -132,8 +162,8 @@ function Navbar({ handleMenu, transitionState, transitions }) {
           <div className="nav-footer">
             © 2022 Microverse
           </div>
-          <div className="close-btn">
-            <GiTriangleTarget className="close-arrow" onClick={handleMenu} />
+          <div className="close-btn-container">
+            <GiTriangleTarget className="close-arrow" onClick={handleCloseMenu} />
           </div>
         </nav>
       )}
@@ -142,7 +172,8 @@ function Navbar({ handleMenu, transitionState, transitions }) {
 }
 
 Navbar.propTypes = {
-  handleMenu: PropTypes.func.isRequired,
+  handleCloseMenu: PropTypes.func.isRequired,
+  setTransitionState: PropTypes.func.isRequired,
   transitionState: PropTypes.bool.isRequired,
   transitions: PropTypes.shape({
     entering: PropTypes.shape({

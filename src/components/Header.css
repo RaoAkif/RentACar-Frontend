@@ -82,8 +82,8 @@ a:hover {
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 1rem 0;
-  font-size: 1.8rem;
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
 }
 
 .navigation-menu li:hover {
@@ -100,7 +100,7 @@ a:hover {
   font-size: 1.4rem;
 }
 
-.close-btn {
+.close-btn-container {
   display: none;
 }
 
@@ -114,7 +114,6 @@ a:hover {
 
 .user-name {
   display: flex;
-  margin-bottom: 4rem;
   font-size: 1.6rem;
   font-weight: normal;
 }
@@ -122,6 +121,11 @@ a:hover {
 .user-name span {
   display: block;
   font-weight: bold;
+}
+
+.sep {
+  border-top: 1px solid #bbb;
+  padding-top: 1.6rem !important;
 }
 
 @media only screen and (min-width: 480px) {
@@ -135,7 +139,7 @@ a:hover {
 
   .navigation-menu ul {
     font-size: 1.6rem;
-    padding-left: 1rem;
+    padding: 0 1rem 0 1rem;
   }
 
   .navigation-menu li {
@@ -143,12 +147,12 @@ a:hover {
   }
 
   .navigation-menu li a {
-    padding-left: 4rem;
+    padding: 1rem 1rem 1rem 4rem;
   }
 
-  .close-btn {
-    width: 7.5rem;
-    height: 6rem;
+  .close-btn-container {
+    width: 5rem;
+    height: 4.6rem;
     font-size: 0.5rem;
     position: absolute;
     display: flex;
@@ -159,6 +163,7 @@ a:hover {
     color: #fff;
     background-color: var(--green-color);
     border-radius: 0 4rem 4rem 0;
+    transition: background-color 0.2s ease-in-out;
   }
 
   .close-arrow {
@@ -166,14 +171,13 @@ a:hover {
     width: 2rem;
     margin: 2rem;
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
     display: block;
     transform: rotate(-90deg);
     text-shadow: 0.2rem 0.2rem;
   }
 
-  .close-arrow:hover {
-    color: var(--green-color) !important;
+  .close-btn-container:hover {
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
 
   .close-btn-mobile {
@@ -183,7 +187,6 @@ a:hover {
   .user-name {
     display: block;
     padding: 0.2rem;
-    margin: 0 0 2rem -3rem;
     font-size: 1.6rem;
   }
 
