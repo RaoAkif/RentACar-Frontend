@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addRental } from '../redux/rental/rentalsReducer';
 import { fetchCars } from '../redux/car/car';
+import NotFound from './NotFound';
 import './NewRental.css';
-// https://www.pixelstalk.net/wp-content/uploads/images6/BMW-Wallpaper-4K-Desktop.jpg
 
 function NewRental() {
   const dispatch = useDispatch();
@@ -31,12 +31,14 @@ function NewRental() {
     navigate('/rentals');
   };
 
-  const emptyCarList = <h2>There are no cars available</h2>;
+  const msg = 'There are no cars available.';
+  const emptyCarList = <NotFound msg={msg} />;
 
   const rentCar = (
     <div className="add-rental-main">
+      <h2 className="title">NEW&nbsp;&nbsp;RENTAL</h2>
+      <p className="rent-subtitle">(Rent a car for a week)</p>
       <Form className="add-rental-form" onSubmit={handleSubmitRent}>
-        <h2 className="title">NEW&nbsp;&nbsp;RENTAL</h2>
         <Form.Group className=" form-control-lg" controlId="formSelectCar">
           <Form.Select name="car" id="car" value={selectCar} onChange={(e) => setSelectCar(e.target.value)}>
             <option value="">Select a Car</option>
@@ -51,7 +53,8 @@ function NewRental() {
           <Form.Control name="city" placeholder="City Name" />
         </Form.Group>
         <Form.Group className="form-control-lg" controlId="dob">
-          <Form.Control type="date" name="date" placeholder="Date of Birth" />
+          <Form.Label className="rent-subtitle">Select a pickup date:</Form.Label>
+          <Form.Control type="date" name="date" placeholder="Date" />
         </Form.Group>
 
         <Button className="btn btn-white" id="form-btn" variant="primary" type="submit">

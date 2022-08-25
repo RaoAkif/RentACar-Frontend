@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/car/car';
 import HomeCarCard from '../components/HomeCarCard';
 import 'react-multi-carousel/lib/styles.css';
+import NotFound from './NotFound';
 import './Home.css';
 
 function Home() {
@@ -25,7 +26,7 @@ function Home() {
     },
     laptop: {
       breakpoint: { max: 1024, min: 768 },
-      items: 3,
+      items: 2,
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
@@ -37,11 +38,13 @@ function Home() {
     },
   };
 
-  const emptyCarsPage = <h2>There are no cars available</h2>;
+  const msg = 'There are no cars available.';
+  const emptyCarsPage = <NotFound msg={msg} />;
 
   const carsPage = (
     <div className="latest-models-main">
       <h2 className="title">LATEST&nbsp;&nbsp;MODELS</h2>
+      <p className="subtitle">Please select a car to rent for a week</p>
       <Carousel responsive={responsive} className="carousel-container" infinite>
         {cars.map((car) => (
           <div key={car.id}>
