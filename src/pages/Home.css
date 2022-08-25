@@ -1,3 +1,7 @@
+.title {
+  margin: 6rem 0 2rem 0 !important;
+}
+
 .latest-models-main {
   display: flex;
   flex-direction: column;
@@ -57,4 +61,28 @@
     color: #fff;
     background-color: var(--green-color);
   }
+}
+
+#social-share {
+  display: flex;
+  justify-content: center;
+}
+
+.sm-share {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px dotted gray;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+}
+
+.sm-share-wa {
+  font-size: 2.7rem !important;
 }

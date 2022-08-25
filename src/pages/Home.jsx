@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import { useSelector, useDispatch } from 'react-redux';
+import { TiSocialTwitterCircular, TiSocialFacebookCircular } from 'react-icons/ti';
+import { RiWhatsappLine } from 'react-icons/ri';
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'next-share';
+
 import { fetchCars } from '../redux/car/car';
 import HomeCarCard from '../components/HomeCarCard';
 import 'react-multi-carousel/lib/styles.css';
@@ -58,6 +62,29 @@ function Home() {
                 desc={car.desc}
               />
             </a>
+            <div id="social-share">
+              <FacebookShareButton
+                url={'https://rent-a-car-frontend.netlify.app/car.id'}
+                title={`Hi! Our brand new car ${car.name} is here. Book it now!`}
+                hashtag="#capstone"
+              >
+                <TiSocialFacebookCircular className="sm-share" />
+              </FacebookShareButton>
+              <WhatsappShareButton
+                url={'https://rent-a-car-frontend.netlify.app/car.id'}
+                hashtag="#microverse_capstone"
+                title={`Hi! Our brand new car ${car.name} is here. Book it now!`}
+              >
+                <RiWhatsappLine className="sm-share sm-share-wa" />
+              </WhatsappShareButton>
+              <TwitterShareButton
+                url={'https://rent-a-car-frontend.netlify.app/car.id'}
+                hashtag="#microverse_capstone"
+                title={`Hi! Our brand new car *${car.name}* is here. Book it now!`}
+              >
+                <TiSocialTwitterCircular className="sm-share" />
+              </TwitterShareButton>
+            </div>
           </div>
         ))}
       </Carousel>

@@ -6,7 +6,6 @@ function RentCard(props) {
   const {
     carName,
     model,
-    price,
     image,
     desc,
   } = props;
@@ -22,10 +21,7 @@ function RentCard(props) {
           :&nbsp;
           <h3 className="model">{model}</h3>
         </div>
-        <p>
-          Rent:&nbsp;
-          {price}
-        </p>
+        <hr />
         <p>{desc}</p>
       </div>
     </div>
@@ -39,7 +35,6 @@ RentCard.defaultProps = {
 RentCard.propTypes = {
   carName: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   desc: PropTypes.string,
 };
