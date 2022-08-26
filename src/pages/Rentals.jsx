@@ -5,6 +5,7 @@ import { fetchRentals, deleteRental } from '../redux/rental/rentalsReducer';
 import 'react-multi-carousel/lib/styles.css';
 import CarCard from '../components/CarCard';
 import './Rentals.css';
+import NotFound from './NotFound';
 
 function Rentals() {
   const dispatch = useDispatch();
@@ -41,7 +42,8 @@ function Rentals() {
     dispatch(deleteRental(id));
   };
 
-  const emptyRentalsPage = <h2>You don&apos;t have any rentals yet</h2>;
+  const msg = 'You don\'t have any rentals yet.';
+  const emptyRentalsPage = <NotFound msg={msg} />;
 
   const rentalsPage = (
     <div className="rentals-main">

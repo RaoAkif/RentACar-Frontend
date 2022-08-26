@@ -26,21 +26,18 @@ function CarDetail() {
 
       <div className="car-info">
         <h3>{car.name}</h3>
-
         <table className="table table-striped table-bordered details-table">
           <tbody>
             <tr>
-              <td className="text-start"><span>Model:</span></td>
+              <td className="text-start"><span>Model</span></td>
               <td className="text-end">{car.model}</td>
             </tr>
             <tr>
-              <td className="text-start"><span>Rent:</span></td>
+              <td className="text-start"><span>Rent</span></td>
               <td className="text-end">{car.rent}</td>
             </tr>
           </tbody>
         </table>
-
-        <p className="car-desc">{car.desc}</p>
         <button className="btn btn-green" id="form-btn-cd" type="button" onClick={redirectHandler}>Rent</button>
       </div>
     </div>

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './DeleteCarCard.css';
+import { BsCircle, BsFillCheckCircleFill } from 'react-icons/bs';
 
 function RentCard(props) {
   const {
@@ -8,14 +10,22 @@ function RentCard(props) {
     model,
   } = props;
 
+  const [boxState, setBoxState] = useState(false);
+
+  const handleBoxState = () => {
+    setBoxState(!boxState);
+  };
+
   return (
-    <tr key={name}>
-      <th scope="row" className="td-checkbox">
-        <input type="checkbox" name="delCar" id={id} />
-      </th>
-      <td className="text-start">{name}</td>
-      <td className="text-start">{model}</td>
-    </tr>
+    <div key={name} className="delete-row">
+      <div className="delete-col col-l">
+        <BsFillCheckCircleFill className={boxState ? 'check' : 'check hidden'} />
+        <BsCircle className="circle-box" />
+        <input type="checkbox" className="check-box" id={id} onClick={() => handleBoxState()} />
+      </div>
+      <div className="delete-col col-c">{name}</div>
+      <div className="delete-col col-r">{model}</div>
+    </div>
   );
 }
 

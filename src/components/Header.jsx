@@ -4,7 +4,8 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import Navbar from './Navbar';
 
 function Header() {
-  const [transitionState, setTransitionState] = useState(false);
+  const [transitionState, setTransitionState] = useState(true);
+
   const transitions = {
     entering: {
       display: 'flex',
@@ -23,19 +24,20 @@ function Header() {
     },
   };
 
-  const handleMenu = () => {
+  const handleCloseMenu = () => {
     setTransitionState(!transitionState);
   };
 
   return (
     <>
       <Navbar
-        handleMenu={handleMenu}
+        handleCloseMenu={handleCloseMenu}
         transitionState={transitionState}
+        setTransitionState={setTransitionState}
         transitions={transitions}
       />
       <header>
-        <HiMenuAlt4 className="hamburger" onClick={handleMenu} />
+        <HiMenuAlt4 className="hamburger" onClick={handleCloseMenu} />
       </header>
     </>
   );
