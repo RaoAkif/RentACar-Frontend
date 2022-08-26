@@ -6,6 +6,9 @@ The main view of the app presents a list of different cars to the user, allowing
 
 **[Back-End](https://github.com/RaoAkif/RentACar-Backend)**
 
+## Application Preview
+![RentACar-removebg](https://user-images.githubusercontent.com/61361037/186997206-ad3751ce-8a7e-4341-bfed-b140f9a79e7b.png)
+
 ## Built With
 - HTML
 - CSS
