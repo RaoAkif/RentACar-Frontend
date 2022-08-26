@@ -1,0 +1,110 @@
+.title {
+  margin: 6rem 0 2rem 0 !important;
+}
+
+.latest-models-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container a {
+  all: unset;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow {
+  display: none;
+}
+
+.react-multiple-carousel__arrow--left {
+  border-radius: 0 4rem 4rem 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  border-radius: 4rem 0 0 4rem;
+}
+
+.react-multiple-carousel__arrow::before {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem 2rem 2rem 0;
+  cursor: pointer;
+  display: block;
+}
+
+@media only screen and (min-width: 480px) {
+  .latest-models-main {
+    padding-left: 20rem;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .react-multiple-carousel__arrow {
+    margin-left: -6rem;
+    margin-right: -6rem;
+    width: 5.5rem;
+    height: 4rem;
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    background-color: var(--green-color);
+  }
+}
+
+#social-share {
+  display: flex;
+  justify-content: center;
+}
+
+.sm-share {
+  font-size: 2rem;
+  margin: 1rem;
+  color: gray;
+}
+
+.sm-share-wa {
+  font-size: 2.5rem !important;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px dotted gray;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+}
+
+.bg-circle {
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+.sm-share-circle {
+  font-size: 5rem;
+  position: absolute;
+  top: -5px;
+  left: -4px;
+  color: gray;
+}
+
+.sm-share-circle-wa {
+  font-size: 5rem;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  color: gray;
+}

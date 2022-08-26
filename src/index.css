@@ -1,5 +1,24 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap');
+
+:root {
+  --green-color: #97bf0e;
+  --dark-green-color: #617c00;
+  --blue-color: #48bab5;
+  --orange-color: #f5c702;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', Arial, serif;
+}
+
+body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -16,12 +35,84 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.title {
+  margin: 10rem 0 2rem 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: grey;
+}
+
+.btn {
+  min-width: 10rem;
+  border-radius: 4rem 4rem 4rem 4rem;
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.btn-white {
+  color: var(--green-color);
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: var(--green-color);
+  border: 1px solid var(--green-color);
+}
+
+.btn-white:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.not-found-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.not-found-container h1 {
+  color: var(--green-color);
+  font-size: 6rem;
+}
+
+.not-found-container p {
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.not-found-container a {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--green-color);
+  text-decoration: none;
+}
+
+.zoom-glass {
+  width: 10rem;
+  color: var(--green-color);
 }

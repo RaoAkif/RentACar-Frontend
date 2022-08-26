@@ -1,0 +1,86 @@
+.delete-car-main {
+  width: 100%;
+  height: 100vh;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+    linear-gradient(black, black),
+    url("/src/assets/images/car-wallpaper.jpg");
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(212, 216, 221, 0.9);
+}
+
+.delete-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.delete-row {
+  width: 100%;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 4rem 4rem 4rem 4rem;
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  color: black !important;
+  background: none;
+}
+
+.row-header {
+  height: 3.6rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--green-color);
+  border: none;
+}
+
+.delete-col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.col-l {
+  width: 20%;
+}
+
+.col-c,
+.col-r {
+  width: 40%;
+}
+
+.delete-form .delete-row:nth-child(even) {
+  background-color: rgba(212, 216, 221, 0.8);
+}
+
+@media only screen and (min-width: 480px) {
+  .delete-car-main {
+    padding-left: 10rem;
+  }
+
+  .delete-form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#delete-th {
+  font-size: 1.8rem;
+  padding-left: 0;
+}

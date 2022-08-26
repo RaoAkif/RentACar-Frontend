@@ -15,10 +15,13 @@
   "extends": ["airbnb", "plugin:react/recommended"],
   "plugins": ["react"],
   "rules": {
+    "react/jsx-curly-brace-presence": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "no-param-reassign": 0,
+    "global-require": 0
   },
   "ignorePatterns": [
     "dist/",
