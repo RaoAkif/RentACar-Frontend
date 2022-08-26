@@ -12,7 +12,7 @@ The main view of the app presents a list of different cars to the user, allowing
 - React
 - Redux
 - Ruby on Rails (Back-End)
-- sqlite3 for the local development (Back-End)
+- Postgresql for the local development (Back-End)
 - Postgresql for the production (Back-End)
 - Heroku for Deployment (Back-End)
 
