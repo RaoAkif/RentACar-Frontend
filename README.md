@@ -1,8 +1,6 @@
 # Rent A Car
 
-> This project is based on an app to rent cars.
-The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents.
-**The app allows to add or remove cars that are going to show to the users (Only for the Admin pendant)
+> This project is full stack website for renting cars. The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents. The app allows the user to add or remove cars (Only if the User is signed in.)
 
 **[Back-End](https://github.com/RaoAkif/RentACar-Backend)**
 
