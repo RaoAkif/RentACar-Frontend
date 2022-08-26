@@ -35,8 +35,8 @@ function DeleteCar() {
       <form className="delete-form" onSubmit={handleDelete}>
         <div className="delete-row row-header">
           <div className="delete-col col-l"> </div>
-          <div className="delete-col col-c">COMPANY</div>
-          <div className="delete-col col-r">MODEL</div>
+          <div id="delete-th" className="delete-col col-c">COMPANY</div>
+          <div id="delete-th" className="delete-col col-r">MODEL</div>
         </div>
         {cars.map((car) => (
           <DeleteCarCard

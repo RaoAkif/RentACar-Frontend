@@ -77,3 +77,13 @@
     align-items: center;
   }
 }
+
+.delete-row {
+  color: black !important;
+  background: none;
+}
+
+#delete-th {
+  font-size: 1.8rem;
+  padding-left: 0;
+}
