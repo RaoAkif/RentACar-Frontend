@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import { useSelector, useDispatch } from 'react-redux';
-import { TiSocialTwitterCircular, TiSocialFacebookCircular } from 'react-icons/ti';
-import { RiWhatsappLine } from 'react-icons/ri';
+import { RiFacebookFill, RiTwitterFill, RiWhatsappLine } from 'react-icons/ri';
+import { GiCircle } from 'react-icons/gi';
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'next-share';
 
 import { fetchCars } from '../redux/car/car';
@@ -68,21 +68,30 @@ function Home() {
                 title={`Hi! Our brand new car ${car.name} is here. Book it now!`}
                 hashtag="#capstone"
               >
-                <TiSocialFacebookCircular className="sm-share" />
+                <div className="bg-circle">
+                  <GiCircle className="sm-share-circle" />
+                  <RiFacebookFill className="sm-share" />
+                </div>
               </FacebookShareButton>
               <WhatsappShareButton
                 url={'https://rent-a-car-frontend.netlify.app/car.id'}
                 hashtag="#microverse_capstone"
                 title={`Hi! Our brand new car ${car.name} is here. Book it now!`}
               >
-                <RiWhatsappLine className="sm-share sm-share-wa" />
+                <div className="bg-circle">
+                  <GiCircle className="sm-share-circle-wa" />
+                  <RiWhatsappLine className="sm-share sm-share-wa" />
+                </div>
               </WhatsappShareButton>
               <TwitterShareButton
                 url={'https://rent-a-car-frontend.netlify.app/car.id'}
                 hashtag="#microverse_capstone"
                 title={`Hi! Our brand new car *${car.name}* is here. Book it now!`}
               >
-                <TiSocialTwitterCircular className="sm-share" />
+                <div className="bg-circle">
+                  <GiCircle className="sm-share-circle" />
+                  <RiTwitterFill className="sm-share" />
+                </div>
               </TwitterShareButton>
             </div>
           </div>

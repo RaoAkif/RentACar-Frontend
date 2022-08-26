@@ -18,11 +18,11 @@ function RentCard(props) {
       <div className="home-card-info">
         <div className="home-name-model">
           <h3>{carName}</h3>
-          :&nbsp;
+          &nbsp;
           <h3 className="model">{model}</h3>
         </div>
         <hr />
-        <p>{desc}</p>
+        <p id="homepage-car-desc">{desc}</p>
       </div>
     </div>
   );

@@ -26,15 +26,14 @@ function CarDetail() {
 
       <div className="car-info">
         <h3>{car.name}</h3>
-        <p className="car-desc">{car.desc}</p>
         <table className="table table-striped table-bordered details-table">
           <tbody>
             <tr>
-              <td className="text-start"><span>Model:</span></td>
+              <td className="text-start"><span>Model</span></td>
               <td className="text-end">{car.model}</td>
             </tr>
             <tr>
-              <td className="text-start"><span>Rent:</span></td>
+              <td className="text-start"><span>Rent</span></td>
               <td className="text-end">{car.rent}</td>
             </tr>
           </tbody>
